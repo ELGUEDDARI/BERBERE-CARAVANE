@@ -250,15 +250,19 @@
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
     }
     @media (max-width: 768px) {
-      .sw { padding: 64px 22px; }
-      .site-header { padding: 0 22px; }
+      .sw { padding: 64px 20px; }
+      .site-header { padding: 0 16px; }
       .site-nav { display: none; }
       .reasons-grid, .team-grid, .exc-grid, .blog-grid, .testi-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .values-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .hero-title { font-size: clamp(2rem, 11vw, 3.5rem); }
-      #hero-frame { width: 260px !important; height: 340px !important; }
+      /* excursion categories — 1 colonne sur mobile */
+      .exc-categories { grid-template-columns: 1fr; gap: 1px; }
+      .exc-cat-panel { padding: 28px 20px; }
+      .exc-cat-name { font-size: 1.1rem; margin-bottom: 14px; }
+      .exc-sub-list a { font-size: 0.86rem; padding: 10px 0; }
     }
   </style>
 </head>
@@ -824,8 +828,9 @@
     if (!frame) return;
     var vw = window.innerWidth;
     var vh = window.innerHeight;
-    var startW = Math.min(300, vw * 0.7);
-    var startH = Math.min(400, vh * 0.65);
+    var isMobile = vw < 769;
+    var startW = isMobile ? Math.min(vw * 0.82, vw - 40) : Math.min(300, vw * 0.7);
+    var startH = isMobile ? Math.min(vh * 0.58, 480) : Math.min(400, vh * 0.65);
 
     frame.style.width         = (startW + (vw - startW) * p) + 'px';
     frame.style.height        = (startH + (vh - startH) * p) + 'px';
