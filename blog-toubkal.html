@@ -123,8 +123,11 @@
     @media (max-width: 768px) { .mob-btn { display: flex; } }
 
   </style>
+    .page-frame{position:fixed;inset:0;z-index:9999;pointer-events:none;border:72px solid transparent;border-image:url('zalij2.jpeg') 12% stretch;}
+    @media(max-width:768px){.page-frame{border-width:28px;}}
 </head>
 <body>
+<div class="page-frame"></div>
 <header class="site-header">
   <a href="index.html" class="logo" aria-label="Berbère Caravane — Accueil">
     <img src="LOGO.jpeg" alt="Berbère Caravane" class="logo-img">

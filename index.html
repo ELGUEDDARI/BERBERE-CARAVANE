@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -412,8 +412,11 @@
     .mob-phone { margin-top: 22px; text-align: center; font-size: 0.8rem; color: rgba(245,238,216,0.4); letter-spacing: 0.1em; }
     @media (max-width: 768px) { .mob-btn { display: flex; } }
   </style>
+    .page-frame{position:fixed;inset:0;z-index:9999;pointer-events:none;border:72px solid transparent;border-image:url('zalij2.jpeg') 12% stretch;}
+    @media(max-width:768px){.page-frame{border-width:28px;}}
 </head>
 <body>
+<div class="page-frame"></div>
 
 <!-- HEADER -->
 <header class="site-header">
