@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villes Impériales — Circuit 8 jours Maroc | Berbère Caravane</title>
+  <meta name="description" content="Circuit 8 jours à travers les villes impériales du Maroc : Rabat, Meknès, Fès et Marrakech. Quatre capitales, mille ans d'histoire avec Berbère Caravane.">
+  <link rel="canonical" href="https://berbere-caravane.ma/excursion-voyages.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--sand:#F5EED8;--dark:#1A1208;--dark2:#201608;--orange:#E8722A;--orange2:#D4601E;--teal:#0D8B7A;--gold:#D4A438;--text-dark:#2A1F0A;--text-muted:#6B5740;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--dark);color:var(--sand);overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;background:rgba(26,18,8,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,164,56,0.18);}
+    .logo{display:flex;align-items:center;gap:14px;}
+    .logo-star{width:36px;height:36px;flex-shrink:0;}
+    .logo-img{height:78px;width:78px;object-fit:contain;border-radius:50%;flex-shrink:0;border:2px solid var(--gold);background:rgba(255,255,255,0.08);box-shadow:0 0 0 5px rgba(212,164,56,0.18),0 4px 18px rgba(0,0,0,0.45);}
+    .logo-img-sm{height:54px;width:54px;}
+    .logo-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--sand);line-height:1.15;}
+    .logo-tag{font-size:0.6rem;font-weight:500;color:var(--gold);letter-spacing:0.2em;text-transform:uppercase;}
+    .site-nav{display:flex;align-items:center;gap:32px;}
+    .site-nav a{font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,238,216,0.75);transition:color 0.2s;}
+    .site-nav a:hover{color:var(--gold);}
+    .nav-cta{padding:9px 22px !important;background:var(--orange);color:var(--sand) !important;border-radius:3px;font-weight:600 !important;opacity:1 !important;box-shadow:3px 3px 0 rgba(0,0,0,0.4);}
+    .page-hero{margin-top:72px;height:520px;position:relative;overflow:hidden;}
+    .page-hero-photo{position:absolute;inset:0;background-size:cover;background-position:center;}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,18,8,0.05) 0%,rgba(26,18,8,0.55) 58%,rgba(26,18,8,0.94) 100%);}
+    .page-hero-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:60px 80px;}
+    .hero-breadcrumb{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .hero-breadcrumb a{color:rgba(212,164,56,0.7);}
+    .page-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.05;color:var(--sand);margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,1),0 4px 40px rgba(0,0,0,0.8);}
+    .page-meta-row{display:flex;gap:20px;flex-wrap:wrap;}
+    .meta-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(26,18,8,0.7);border:1px solid rgba(212,164,56,0.3);border-radius:999px;font-size:0.75rem;font-weight:500;color:var(--sand);}
+    .meta-pill span{color:var(--gold);}
+    .page-content{max-width:1100px;margin:0 auto;padding:80px 48px;}
+    .two-col{display:grid;grid-template-columns:2fr 1fr;gap:60px;align-items:start;}
+    .s-kicker{font-size:0.7rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+    .s-heading{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--sand);margin-bottom:20px;}
+    .body-text{font-size:0.9rem;line-height:1.9;color:rgba(245,238,216,0.72);margin-bottom:16px;}
+    .cities-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px;}
+    .city-card{padding:28px;background:rgba(245,238,216,0.04);border:1px solid rgba(212,164,56,0.15);}
+    .city-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--gold);margin-bottom:6px;}
+    .city-days{font-size:0.72rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+    .city-text{font-size:0.84rem;line-height:1.78;color:rgba(245,238,216,0.62);}
+    .sidebar{position:sticky;top:96px;}
+    .info-card{background:var(--dark2);border:1px solid rgba(212,164,56,0.2);padding:32px;margin-bottom:24px;}
+    .info-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:20px;border-bottom:1px solid rgba(212,164,56,0.15);padding-bottom:14px;}
+    .info-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(212,164,56,0.07);font-size:0.82rem;}
+    .info-row:last-child{border-bottom:none;}
+    .info-label{color:rgba(245,238,216,0.5);}
+    .info-value{color:var(--sand);font-weight:500;text-align:right;}
+    .cta-btn{display:block;width:100%;padding:16px;background:var(--orange);color:var(--sand);text-align:center;font-weight:600;font-size:0.9rem;box-shadow:5px 5px 0 rgba(0,0,0,0.4);transition:transform 0.15s,background 0.15s;}
+    .cta-btn:hover{background:var(--orange2);transform:translate(-2px,-2px);}
+    .includes{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:16px;}
+    .includes li{font-size:0.82rem;color:rgba(245,238,216,0.65);padding-left:16px;position:relative;}
+    .includes li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-weight:700;}
+    .z-band{height:44px;background-repeat:repeat-x;background-size:160px 44px;}
+    .site-footer{background:var(--dark);border-top:2px solid rgba(212,164,56,0.18);padding:60px 48px 36px;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+    .footer-copy{font-size:0.72rem;color:rgba(245,238,216,0.3);margin-top:40px;max-width:1100px;margin-left:auto;margin-right:auto;padding-top:20px;border-top:1px solid rgba(212,164,56,0.1);}
+    .f-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .f-links a{font-size:0.8rem;color:rgba(245,238,216,0.55);transition:color 0.2s;}
+    .f-links a:hover{color:var(--sand);}
+    .f-col-title{font-size:0.68rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+    .wa-bubble{position:fixed;right:24px;bottom:24px;z-index:300;display:flex;align-items:center;gap:12px;padding:13px 20px 13px 13px;background:#25D366;color:#fff;border-radius:999px;box-shadow:0 8px 24px rgba(37,211,102,0.4);font-family:'Inter',sans-serif;font-weight:600;font-size:0.875rem;transition:transform 0.2s;}
+    .wa-bubble:hover{transform:translateY(-2px);}
+    .wa-icon{width:36px;height:36px;background:rgba(255,255,255,0.18);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .wa-lbl{display:flex;flex-direction:column;line-height:1.2;}
+    .wa-lbl-top{font-size:0.66rem;opacity:0.82;font-weight:500;}
+    @media(max-width:768px){.site-header{padding:0 22px;}.site-nav{display:none;}.page-hero{height:380px;}.page-hero-content{padding:40px 22px;}.page-content{padding:48px 22px;}.two-col{grid-template-columns:1fr;}.sidebar{position:static;}.cities-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo" aria-label="Berbère Caravane — Accueil">
+    <img src="LOGO.jpeg" alt="Berbère Caravane" class="logo-img">
+  </a>
+  <nav class="site-nav" aria-label="Navigation">
+    <a href="index.html#excursions">Excursions</a>
+    <a href="index.html#equipe">Équipe</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+circuit+Villes+Imp%C3%A9riales." class="nav-cta" target="_blank" rel="noopener">Réserver</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-photo" id="hero-photo" role="img" aria-label="Médina de Fès ou Marrakech, architecture islamique du Maroc"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="hero-breadcrumb"><a href="index.html">Accueil</a> / <a href="index.html#excursions">Excursions</a> / Voyages &amp; Découvertes</div>
+    <h1 class="page-title">Villes Impériales</h1>
+    <div class="page-meta-row">
+      <span class="meta-pill"><span>🏛</span> Fès → Marrakech</span>
+      <span class="meta-pill"><span>📅</span> 8 jours</span>
+      <span class="meta-pill"><span>🎭</span> Culturel</span>
+      <span class="meta-pill"><span>🕌</span> 4 capitales</span>
+    </div>
+  </div>
+</div>
+
+<div class="z-band" id="z-band" aria-hidden="true"></div>
+
+<div class="page-content">
+  <div class="two-col">
+    <main>
+      <div class="s-kicker">Circuit · Voyages &amp; Découvertes</div>
+      <h2 class="s-heading">Quatre capitales, mille ans d'histoire</h2>
+      <p class="body-text">
+        Le Maroc a connu quatre villes impériales successives — Rabat, Meknès, Fès et Marrakech.
+        Chacune porte en elle une époque, un art de vivre, une manière d'occuper l'espace.
+        Ce circuit de huit jours vous invite à les traverser toutes, du nord au sud, du blanc de
+        l'Atlantique à l'ocre de l'Atlas.
+      </p>
+      <p class="body-text">
+        Médersas incrustées de zellige et de stuc, souks millénaires où les teinturiers travaillent
+        encore à l'ancienne, palais en ruines où les chats font la sieste — nous vous emmenons
+        là où les guides ordinaires ne s'arrêtent pas.
+      </p>
+
+      <div class="s-kicker" style="margin-top:40px;">Les quatre villes</div>
+      <h3 class="s-heading">Au fil de l'itinéraire</h3>
+      <div class="cities-grid">
+        <div class="city-card">
+          <div class="city-days">Jours 1–2</div>
+          <div class="city-name">Rabat</div>
+          <p class="city-text">La capitale moderne du Royaume. Tour Hassan, mausolée Mohammed V, Kasbah des Oudaïas dominant l'Atlantique. Une ville que les touristes traversent — nous y restons.</p>
+        </div>
+        <div class="city-card">
+          <div class="city-days">Jours 3–4</div>
+          <div class="city-name">Meknès &amp; Volubilis</div>
+          <p class="city-text">La ville d'Ismaïl, sultan bâtisseur. Bab Mansour, grenier de Moulay Ismaïl, et à 30 km, les ruines romaines de Volubilis inscrites à l'UNESCO.</p>
+        </div>
+        <div class="city-card">
+          <div class="city-days">Jours 5–6</div>
+          <div class="city-name">Fès el-Bali</div>
+          <p class="city-text">La plus ancienne médina du monde habitée en continu. Tanneries Chouara, medersa Bou Inania, fondouk des teinturiers. Deux jours ne suffisent pas — mais on commence.</p>
+        </div>
+        <div class="city-card">
+          <div class="city-days">Jours 7–8</div>
+          <div class="city-name">Marrakech</div>
+          <p class="city-text">La ville ocre. Jardins de la Majorelle, palais de la Bahia, souks de la médina et Jemaa el-Fna au coucher du soleil. Fin du circuit dans la magie du soir.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar" aria-label="Informations pratiques">
+      <div class="info-card">
+        <div class="info-title">Informations pratiques</div>
+        <div class="info-row"><span class="info-label">Durée</span><span class="info-value">8 jours / 7 nuits</span></div>
+        <div class="info-row"><span class="info-label">Style</span><span class="info-value">Culturel ★★★★☆</span></div>
+        <div class="info-row"><span class="info-label">Itinéraire</span><span class="info-value">Rabat → Marrakech</span></div>
+        <div class="info-row"><span class="info-label">Groupe</span><span class="info-value">2 – 8 personnes</span></div>
+        <div class="info-row"><span class="info-label">Hébergement</span><span class="info-value">Riads sélectionnés</span></div>
+        <div class="info-row"><span class="info-label">Toute l'année</span><span class="info-value">Oui (éviter août)</span></div>
+      </div>
+      <div class="info-card">
+        <div class="info-title">Inclus</div>
+        <ul class="includes">
+          <li>Guide culturel bilingue</li>
+          <li>Transport climatisé entre villes</li>
+          <li>7 nuits en riads de charme</li>
+          <li>Petits-déjeuners inclus</li>
+          <li>Visites guidées des monuments</li>
+          <li>Dîner de bienvenue à Fès</li>
+          <li>Entrées des sites inscrits</li>
+        </ul>
+      </div>
+      <div class="info-card" style="margin-top:16px;">
+        <div class="info-title" style="color:var(--orange);">Non inclus</div>
+        <ul class="includes" style="list-style:none;">
+          <li style="padding:6px 0;border-bottom:1px solid rgba(212,164,56,0.1);font-size:.82rem;color:rgba(245,238,216,.65);">✗ Vols internationaux</li>
+          <li style="padding:6px 0;border-bottom:1px solid rgba(212,164,56,0.1);font-size:.82rem;color:rgba(245,238,216,.65);">✗ Assurance voyage</li>
+          <li style="padding:6px 0;border-bottom:1px solid rgba(212,164,56,0.1);font-size:.82rem;color:rgba(245,238,216,.65);">✗ Déjeuners et dîners non mentionnés</li>
+          <li style="padding:6px 0;border-bottom:1px solid rgba(212,164,56,0.1);font-size:.82rem;color:rgba(245,238,216,.65);">✗ Dépenses personnelles et shopping</li>
+          <li style="padding:6px 0;font-size:.82rem;color:rgba(245,238,216,.65);">✗ Pourboires (guide et chauffeur)</li>
+        </ul>
+      </div>
+      <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+circuit+Villes+Imp%C3%A9riales+8+jours."
+         class="cta-btn" target="_blank" rel="noopener noreferrer">Réserver ce circuit via WhatsApp</a>
+    </aside>
+  </div>
+</div>
+
+<!-- AUTRES CIRCUITS VOYAGES -->
+<div style="max-width:1100px;margin:0 auto;padding:0 48px 80px;">
+
+  <section id="grand-tour" style="margin-top:72px;padding-top:48px;border-top:2px solid rgba(212,164,56,0.2);">
+    <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Circuit · 15 Jours</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">Le Grand Tour du Maroc</h2>
+    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:16px;">Le Grand Tour du Maroc est le circuit ultime pour qui veut découvrir le pays en profondeur : de Marrakech aux dunes de l'Erg Chebbi, en passant par le Drâa, les gorges du Dadès et du Todra, Fès, Meknès, Chefchaouen et le retour par Rabat. 15 jours de diversité absolue — montagne, désert, mer, médinas et campagne berbère.</p>
+    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;"><strong style="color:var(--gold);">Inclus :</strong> Transport, guide, hébergement riads/hôtels, petits-déjeuners, visites guidées. <strong style="color:var(--orange);">Non inclus :</strong> Vols, assurance, déjeuners, dîners (sauf bivouac), pourboires.</p>
+    <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+Grand+Tour+du+Maroc+15+jours." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;">Réserver le Grand Tour via WhatsApp</a>
+  </section>
+
+  <section id="merveilles-atlas" style="margin-top:72px;padding-top:48px;border-top:2px solid rgba(212,164,56,0.2);">
+    <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Circuit · 8 Jours</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">Les Merveilles de l'Atlas</h2>
+    <div style="font-size:.75rem;color:rgba(245,238,216,.55);margin-bottom:28px;">Niveau : Facile &nbsp;·&nbsp; Mai à fin Octobre &nbsp;·&nbsp; 2 nuits hôtel + 1 gîte d'étape + 4 sous tente</div>
+    <div class="itinerary" style="max-width:720px;">
+      <div class="day-block"><div class="day-num">01</div><div><div class="day-title">Arrivée — Marrakech ou Casablanca</div><p class="day-text">Accueil à l'aéroport. Visite libre de la ville. Nuit à l'hôtel.</p></div></div>
+      <div class="day-block"><div class="day-num">02</div><div><div class="day-title">Vers la Vallée Heureuse — Gîte d'étape</div><p class="day-text">Départ pour une très jolie étape. Arrêt à l'arche naturelle d'Iminifri et le site d'Iwaridène où se trouvent les traces du dinosaure. Continuer vers la vallée des Aït Boulli et la vallée heureuse. Nuit au Gîte d'étape.</p></div></div>
+      <div class="day-block"><div class="day-num">03</div><div><div class="day-title">Col de Tirghiste 2700m — Zaouiat Ahansal</div><p class="day-text">Quitter cette espace vert au cœur de l'atlas et franchir le col de Tirghiste, 2700 M. Longer le pied du mont Zourki. Possibilité de partager un thé avec des nomades des Aît Atta sous la kaïma. Nuit sous tente à Zaouit Ahansal ou Znati.</p></div></div>
+      <div class="day-block"><div class="day-num">04</div><div><div class="day-title">La Cathédrale — Lac Ben Elouidane</div><p class="day-text">Suivre l'Oued Ahansal jusqu'à la fameuse Cathédrale, Mesfrane en plein centre de la réserve naturelle de Tamga. Vue impressionnante du col d'Aît Issa sur le lac de Ben Elouidane. Passer par le pont perché dans le vide en voiture d'Afdanousse. Nuit chez l'habitant avec repas de fête.</p></div></div>
+      <div class="day-block"><div class="day-num">05</div><div><div class="day-title">Imilchil — Lac Isli</div><p class="day-text">Les paysages de montagnes donnent un très grand charme à cette journée. Vous passerez du rouge à l'ocre au noir et puis au vert. Mais l'arrivée à Imilchil reste l'un des points forts de cette étape. Nuit au Bord du lac Isli. N'oubliez pas de demander à votre guide l'explication de la légende de deux lacs avoisinants. Biv.</p></div></div>
+      <div class="day-block"><div class="day-num">06</div><div><div class="day-title">Aghbala — Laksiba (pins, schiste)</div><p class="day-text">Descente à Aghbala par des petites forêts de pins et un terrain schisteux. Continuer au milieu des chaines vert jusqu'à Naoueur, pays des pommiers. Nuit sous tente à Laksiba.</p></div></div>
+      <div class="day-block"><div class="day-num">07</div><div><div class="day-title">Retour Marrakech ou Casablanca</div><p class="day-text">Emprunter la route Fès, Marrakech. Longer le moyen atlas par le versant sud. Traverser la plaine des agrumes parfumée par des odeurs naturels. Halte au fort de Âine Asserdoune et déjeuner à Béni-Mellal. Visite libre de Marrakech ou de Casablanca. Nuit à l'Hôtel.</p></div></div>
+      <div class="day-block"><div class="day-num">08</div><div><div class="day-title">Transfert aéroport — Fin des services</div><p class="day-text">Transfert hôtel, Aéroport. Vol retour.</p></div></div>
+    </div>
+    <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+circuit+Merveilles+de+l%27Atlas+8+jours." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;margin-top:32px;">Réserver Merveilles de l'Atlas via WhatsApp</a>
+  </section>
+
+  <section id="evasion" style="margin-top:72px;padding-top:48px;border-top:2px solid rgba(212,164,56,0.2);">
+    <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Circuit · 8 Jours</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">Évasion Saharienne</h2>
+    <div style="font-size:.75rem;color:rgba(245,238,216,.55);margin-bottom:28px;">Niveau : Facile &nbsp;·&nbsp; Début Octobre à fin Avril &nbsp;·&nbsp; 3 nuits hôtel + 4 sous tente</div>
+    <div class="itinerary" style="max-width:720px;">
+      <div class="day-block"><div class="day-num">01</div><div><div class="day-title">Arrivée à Marrakech</div><p class="day-text">Arrivée et transfert à l'hôtel à Marrakech. Nuit à l'hôtel. Visite de libre de la ville.</p></div></div>
+      <div class="day-block"><div class="day-num">02</div><div><div class="day-title">Col de Tichka — Ouarzazate — Vallée des Roses</div><p class="day-text">Départ de voyage en 4x4 pour atteindre le col de Tichka, Ouarzazate, vallée des roses.</p></div></div>
+      <div class="day-block"><div class="day-num">03</div><div><div class="day-title">Gorges du Dadès — Todra — Palmeraie de Tinghir</div><p class="day-text">Vallée des roses, Gorges du Dades, de Todra, la palmeraie de Tinghir et ses magnifiques jardins.</p></div></div>
+      <div class="day-block"><div class="day-num">04</div><div><div class="day-title">Saghro — Oasis de Nkob — Vallée du Drâa</div><p class="day-text">Petit tour à Tinghir, traversée du saghro, les oasis de Nkob longer la vallée du Drâa.</p></div></div>
+      <div class="day-block"><div class="day-num">05</div><div><div class="day-title">Musée Ouled Driss — Marche au Sahara</div><p class="day-text">Visite du musée d'Ouled Driss et son ksar unique. Marche agréable au Sahara.</p></div></div>
+      <div class="day-block"><div class="day-num">06</div><div><div class="day-title">Lever du soleil — Foum Zguid — Tissage</div><p class="day-text">Assister au lever du soleil, architecture africaine à Foum Zguid, visite d'une maison de tissage.</p></div></div>
+      <div class="day-block"><div class="day-num">07</div><div><div class="day-title">Aït Ben Haddou — Casbah de Telouet — Col de Tichka</div><p class="day-text">Visite d'Aït ben Haddou, casbah de Telouet, col de Tichka.</p></div></div>
+      <div class="day-block"><div class="day-num">08</div><div><div class="day-title">Transfert aéroport — Vol retour</div><p class="day-text">Transfert hôtel, Aéroport. Vol retour.</p></div></div>
+    </div>
+    <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+l%27%C3%89vasion+Saharienne+8+jours." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;margin-top:32px;">Réserver Évasion Saharienne via WhatsApp</a>
+  </section>
+
+</div>
+
+<footer class="site-footer" aria-label="Pied de page">
+  <div class="footer-inner">
+    <div><a href="index.html" class="logo"><img src="LOGO.jpeg" alt="Berbère Caravane" class="logo-img logo-img-sm"></a></div>
+    <div><div class="f-col-title">Autres excursions</div><ul class="f-links"><li><a href="excursion-haut-atlas.html">Ascension du Toubkal</a></li><li><a href="excursion-desert-sud.html">Dunes de Merzouga</a></li><li><a href="excursion-journee.html">Vallée de l'Ourika</a></li><li><a href="excursion-theme.html">Chemins des Caravanes</a></li><li><a href="excursion-cote-atlantique.html">Essaouira</a></li></ul></div>
+    <div><div class="f-col-title">Contact</div><address style="font-style:normal;font-size:.8rem;color:rgba(245,238,216,.55);line-height:1.8;">N°333, Lot Roumiia, Askejour<br>40000 Marrakech, Maroc<br><a href="https://wa.me/212662132973" target="_blank" rel="noopener" style="color:var(--gold);">+212 662 132 973</a></address></div>
+  </div>
+  <p class="footer-copy">© 2026 Berbère Caravane — Tous droits réservés</p>
+</footer>
+
+<a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+circuit+Villes+Imp%C3%A9riales." class="wa-bubble" target="_blank" rel="noopener noreferrer" aria-label="Contacter via WhatsApp">
+  <span class="wa-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></span>
+  <span class="wa-lbl"><span class="wa-lbl-top">Réserver via</span><span>WhatsApp</span></span>
+</a>
+<script>
+(function(){
+  function zellige(bg,gold,op){var sz=240,cx=120,cy=120,N=12,a=op||0.14;function p(ang,r){var rad=(ang-90)*Math.PI/180;return(cx+r*Math.cos(rad)).toFixed(1)+','+(cy+r*Math.sin(rad)).toFixed(1);}function poly(pts,op2){return'<polygon points="'+pts+'" fill="'+gold+'" fill-opacity="'+op2+'" stroke="none"/>';}var s=[];for(var i=0;i<N;i++){var b=i*30;s.push(poly([p(b-9,98),p(b+9,98),p(b+12,82),p(b,75),p(b-12,82)].join(' '),a*0.5));}for(var i=0;i<N;i++){var b=i*30+15;s.push(poly([p(b,66),p(b+7,53),p(b,40),p(b-7,53)].join(' '),a*0.85));}for(var i=0;i<N;i++){var b=i*30;s.push(poly([p(b,38),p(b-4.5,15),p(b+4.5,15)].join(' '),a*1.1));}for(var i=0;i<N;i++){var b=i*30+15;s.push(poly([p(b,28),p(b-3,15),p(b+3,15)].join(' '),a*0.75));}s.push('<circle cx="'+cx+'" cy="'+cy+'" r="12" fill="'+gold+'" fill-opacity="'+(a*1.5)+'" stroke="none"/>');return'<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'"><rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>'+s.join('')+'</svg>';}
+  function zbg(svg){return'url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)+'")';}
+  var bb=zbg(zellige('#1A1208','#D4A438',0.16));
+  document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='240px 240px';
+  function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
+  loadBg('hero-photo','ait-benhaddou.jpg','https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=1800&q=80','#8a4520');
+})();
+</script>
+</body>
+</html>

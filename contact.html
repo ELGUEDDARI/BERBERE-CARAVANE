@@ -1,0 +1,595 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Berbère Caravane | Treks &amp; Excursions au Maroc</title>
+  <meta name="description" content="Contactez Berbère Caravane pour réserver votre trek ou excursion au Maroc depuis Marrakech. Réponse sous 24h, devis gratuit.">
+  <link rel="canonical" href="https://berbere-caravane.ma/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sand: #F5EED8; --dark: #1A1208; --dark2: #201608;
+      --orange: #E8722A; --gold: #D4A438; --teal: #0D8B7A;
+      --blue: #1A4A8B; --text-dark: #2A1F0A; --text-muted: #6B5740;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--dark); color: var(--sand); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 72px;
+      background: rgba(26,18,8,0.94); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212,164,56,0.18);
+    }
+    .logo { display: flex; align-items: center; gap: 14px; }
+    .logo-star { width: 38px; height: 38px; flex-shrink: 0; }
+    .logo-img{height:78px;width:78px;object-fit:contain;border-radius:50%;flex-shrink:0;border:2px solid var(--gold);background:rgba(255,255,255,0.08);box-shadow:0 0 0 5px rgba(212,164,56,0.18),0 4px 18px rgba(0,0,0,0.45);}
+    .logo-img-sm{height:54px;width:54px;}
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--sand); letter-spacing: 0.04em; line-height: 1.15; }
+    .logo-tag { font-size: 0.62rem; font-weight: 500; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; }
+    .site-nav { display: flex; align-items: center; gap: 36px; }
+    .site-nav a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,238,216,0.75); transition: color 0.2s; }
+    .site-nav a:hover { color: var(--gold); }
+    .site-nav .nav-cta { background: var(--orange); color: #fff; padding: 9px 22px; border-radius: 4px; }
+    .site-nav .nav-cta:hover { background: #D4601E; color: #fff; }
+    @media (max-width: 768px) {
+      .site-header { padding: 0 20px; }
+      .site-nav { display: none; }
+    }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding-top: 72px; min-height: 320px; position: relative;
+      display: flex; align-items: flex-end;
+      background: linear-gradient(180deg, rgba(26,18,8,0) 0%, rgba(26,18,8,0.7) 100%), #2A1A0A;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-size: cover; background-position: center;
+    }
+    .page-hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(20,12,4,0.52) 0%, rgba(20,12,4,0.93) 100%);
+      pointer-events: none;
+    }
+    .page-hero-content {
+      position: relative; z-index: 1; width: 100%; max-width: 1200px;
+      margin: 0 auto; padding: 48px 48px 56px;
+    }
+    .breadcrumb { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,238,216,0.85); margin-bottom: 14px; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; line-height: 1.1; color: var(--sand); text-shadow: 0 2px 24px rgba(0,0,0,0.5); }
+    .page-hero-sub { margin-top: 14px; font-size: 1rem; color: rgba(245,238,216,0.92); max-width: 520px; text-shadow: 0 1px 10px rgba(0,0,0,0.4); }
+
+    /* Z-BAND */
+    .z-band { height: 60px; width: 100%; }
+
+    /* CONTACT MAIN */
+    .contact-section { padding: 80px 48px; background: var(--sand); }
+    .contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 64px; }
+
+    /* FORM */
+    .form-title { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .form-sub { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 36px; line-height: 1.6; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dark); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 13px 16px; border: 1.5px solid #DDD5BF; border-radius: 6px;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text-dark);
+      background: #FFFDF5; outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--orange); }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-group select { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B5740' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+    .form-note { grid-column: 1 / -1; font-size: 0.78rem; color: var(--text-muted); margin-top: -4px; }
+    .form-submit {
+      grid-column: 1 / -1; display: flex; align-items: center; gap: 16px;
+      margin-top: 8px;
+    }
+    .btn-submit {
+      background: var(--orange); color: #fff; border: none; cursor: pointer;
+      padding: 15px 36px; border-radius: 6px; font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-submit:hover { background: #D4601E; transform: translateY(-1px); }
+    .btn-wa {
+      display: flex; align-items: center; gap: 10px;
+      background: #25D366; color: #fff; padding: 15px 26px; border-radius: 6px;
+      font-size: 0.9rem; font-weight: 600; transition: background 0.2s, transform 0.15s;
+    }
+    .btn-wa:hover { background: #1fb558; transform: translateY(-1px); }
+    .btn-wa svg { flex-shrink: 0; }
+
+    /* INFO CARD */
+    .info-card { position: sticky; top: 96px; }
+    .info-box {
+      background: var(--dark); color: var(--sand); border-radius: 12px;
+      overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+    }
+    .info-box-header {
+      background: var(--orange); padding: 28px 32px;
+    }
+    .info-box-header h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .info-box-header p { font-size: 0.82rem; opacity: 0.9; }
+    .info-items { padding: 28px 32px; display: flex; flex-direction: column; gap: 28px; }
+    .info-item { display: flex; gap: 16px; align-items: flex-start; }
+    .info-icon {
+      width: 44px; height: 44px; border-radius: 8px; flex-shrink: 0;
+      background: rgba(212,164,56,0.12); display: flex; align-items: center; justify-content: center;
+    }
+    .info-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 5px; }
+    .info-value { font-size: 0.88rem; color: rgba(245,238,216,0.85); line-height: 1.55; }
+    .info-value a { color: var(--gold); }
+    .info-value a:hover { text-decoration: underline; }
+    .info-divider { height: 1px; background: rgba(212,164,56,0.15); margin: 0 32px; }
+
+    /* MAP */
+    .map-container { margin-top: 24px; border-radius: 12px; overflow: hidden; height: 220px; background: #2A2010; }
+    .map-container iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* RESPONSE TIME BADGE */
+    .response-badge {
+      margin-top: 16px; padding: 14px 20px; border-radius: 8px;
+      background: rgba(13,139,122,0.15); border: 1px solid rgba(13,139,122,0.3);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .response-dot { width: 10px; height: 10px; border-radius: 50%; background: #0D8B7A; flex-shrink: 0; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
+    .response-text { font-size: 0.82rem; color: rgba(245,238,216,0.7); line-height: 1.4; }
+    .response-text strong { color: #0D8B7A; }
+
+    /* SUCCESS STATE */
+    .form-success { display: none; text-align: center; padding: 48px 24px; }
+    .form-success .success-icon { font-size: 3rem; margin-bottom: 16px; }
+    .form-success h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--text-dark); margin-bottom: 10px; }
+    .form-success p { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* FAQ SECTION */
+    .faq-section { padding: 72px 48px; background: var(--dark2); }
+    .faq-inner { max-width: 800px; margin: 0 auto; }
+    .faq-kicker { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
+    .faq-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    .faq-div { width: 48px; height: 3px; background: var(--orange); margin: 0 0 40px; }
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item { border-bottom: 1px solid rgba(212,164,56,0.12); }
+    .faq-q { width: 100%; background: none; border: none; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--sand); text-align: left; gap: 16px; }
+    .faq-q:hover { color: var(--gold); }
+    .faq-icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid rgba(212,164,56,0.4); display: flex; align-items: center; justify-content: center; transition: transform 0.25s, border-color 0.2s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--gold); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; font-size: 0.875rem; color: rgba(245,238,216,0.7); line-height: 1.75; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner { padding-bottom: 20px; }
+
+    /* FOOTER */
+    #site-footer { background: var(--dark); border-top: 1px solid rgba(212,164,56,0.12); padding: 64px 48px 0; }
+    .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 56px; }
+    .footer-desc { margin-top: 18px; font-size: 0.82rem; color: rgba(245,238,216,0.45); line-height: 1.7; max-width: 280px; }
+    .f-col-title { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 18px; }
+    .f-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .f-links a { font-size: 0.82rem; color: rgba(245,238,216,0.5); transition: color 0.2s; }
+    .f-links a:hover { color: var(--sand); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(212,164,56,0.1); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 0.75rem; color: rgba(245,238,216,0.3); }
+
+    /* WA BUBBLE */
+    .wa-bubble {
+      position: fixed; bottom: 28px; right: 28px; z-index: 300;
+      display: flex; align-items: center; gap: 10px;
+      background: #25D366; color: #fff; padding: 12px 20px 12px 14px;
+      border-radius: 50px; box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      font-family: 'Inter', sans-serif; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-bubble:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .wa-icon { width: 36px; height: 36px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .wa-label { display: flex; flex-direction: column; }
+    .wa-label-top { font-size: 0.65rem; opacity: 0.85; }
+    .wa-label span:last-child { font-size: 0.88rem; font-weight: 700; line-height: 1; }
+
+    @media (max-width: 1024px) {
+      .contact-inner { grid-template-columns: 1fr; }
+      .info-card { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .contact-section, .faq-section { padding: 48px 20px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-submit { flex-direction: column; align-items: stretch; }
+      .page-hero-content { padding: 32px 20px 40px; }
+      .footer-grid { grid-template-columns: 1fr; padding: 40px 0; }
+      #site-footer { padding: 40px 20px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <a href="index.html" class="logo" aria-label="Berbère Caravane — Accueil">
+    <img src="LOGO.jpeg" alt="Berbère Caravane" class="logo-img">
+  </a>
+  <nav class="site-nav" aria-label="Navigation principale">
+    <a href="index.html#excursions">Excursions</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="index.html#equipe">Notre équipe</a>
+    <a href="contact.html" aria-current="page" style="color:var(--gold)">Contact</a>
+    <a href="https://wa.me/212662132973?text=Bonjour%2C+je+veux+r%C3%A9server+une+excursion." class="nav-cta" target="_blank" rel="noopener">Réserver</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero" aria-labelledby="contact-title">
+  <div class="page-hero-bg" id="hero-photo" role="img" aria-label="Vue panoramique Marrakech, Maroc"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> / Contact</div>
+    <h1 id="contact-title">Parlons de<br>votre voyage</h1>
+    <p class="page-hero-sub">Un projet de trek, une question sur nos excursions ? Répondons-y ensemble — sous 24h.</p>
+  </div>
+</section>
+
+<!-- Z-BAND -->
+<div class="z-band" id="z-band-top" aria-hidden="true"></div>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" aria-labelledby="form-title">
+  <div class="contact-inner">
+
+    <!-- FORM -->
+    <div>
+      <h2 class="form-title" id="form-title">Envoyez-nous un message</h2>
+      <p class="form-sub">Décrivez votre projet : destination, durée souhaitée, nombre de personnes. Nous vous répondons avec un devis personnalisé.</p>
+
+      <div id="form-wrapper">
+        <form id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="f-name">Prénom &amp; Nom *</label>
+              <input type="text" id="f-name" name="name" placeholder="Marie Dupont" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email *</label>
+              <input type="email" id="f-email" name="email" placeholder="marie@exemple.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="f-phone">Téléphone / WhatsApp</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+33 6 12 34 56 78" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="f-persons">Nombre de personnes</label>
+              <select id="f-persons" name="persons">
+                <option value="">Sélectionner...</option>
+                <option>1 personne</option>
+                <option>2 personnes</option>
+                <option>3 — 4 personnes</option>
+                <option>5 — 8 personnes</option>
+                <option>+ de 8 personnes</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="f-excursion">Excursion souhaitée</label>
+              <select id="f-excursion" name="excursion">
+                <option value="">Sélectionner une excursion...</option>
+                <optgroup label="Trekking Haut Atlas">
+                  <option>Ascension du Toubkal (4 jours)</option>
+                  <option>Trek M'goun / Vallée heureuse</option>
+                </optgroup>
+                <optgroup label="Désert">
+                  <option>Dunes de Merzouga (3 jours)</option>
+                  <option>Oasis du Drâa &amp; Zagora</option>
+                </optgroup>
+                <optgroup label="Excursions à la journée">
+                  <option>Vallée de l'Ourika</option>
+                  <option>Cascades d'Ouzoud</option>
+                  <option>Aït Ben Haddou</option>
+                  <option>Essaouira journée</option>
+                </optgroup>
+                <optgroup label="Circuits">
+                  <option>Villes Impériales (8 jours)</option>
+                  <option>Chemins des Caravanes (7 jours)</option>
+                  <option>Côte Atlantique (5 jours)</option>
+                </optgroup>
+                <option value="autre">Autre / Circuit sur mesure</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="f-dates">Dates envisagées</label>
+              <input type="text" id="f-dates" name="dates" placeholder="Ex : début juillet 2026, ou flexible">
+            </div>
+            <div class="form-group full">
+              <label for="f-message">Votre message *</label>
+              <textarea id="f-message" name="message" placeholder="Décrivez votre projet, vos attentes, votre niveau de forme physique, vos questions..." required></textarea>
+            </div>
+            <p class="form-note">* Champs obligatoires. Vos données ne seront jamais partagées avec des tiers.</p>
+            <div class="form-submit">
+              <button type="submit" class="btn-submit">Envoyer ma demande</button>
+              <a href="https://wa.me/212662132973?text=Bonjour%2C+je+veux+organiser+un+voyage+au+Maroc+avec+Berb%C3%A8re+Caravane." target="_blank" rel="noopener" class="btn-wa">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+                WhatsApp direct
+              </a>
+            </div>
+          </div>
+        </form>
+
+        <div class="form-success" id="form-success" role="status" aria-live="polite">
+          <div class="success-icon">✅</div>
+          <h3>Message envoyé !</h3>
+          <p>Merci pour votre message. Nous vous répondrons dans les 24 heures.<br>En attendant, vous pouvez aussi nous contacter directement sur WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO CARD -->
+    <aside class="info-card" aria-label="Coordonnées">
+      <div class="info-box">
+        <div class="info-box-header">
+          <h3>Nos coordonnées</h3>
+          <p>Lundi — Samedi · 08h00 à 19h00</p>
+        </div>
+        <div class="info-items">
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4A438" stroke-width="2" stroke-linecap="round">
+                <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7 12.8 12.8 0 00.7 2.8 2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4 12.8 12.8 0 002.8.7A2 2 0 0122 16.9z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="info-label">Téléphone &amp; WhatsApp</div>
+              <div class="info-value">
+                <a href="tel:+212662132973">+212 662 132 973</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-divider" aria-hidden="true"></div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4A438" stroke-width="2" stroke-linecap="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value">
+                <a href="mailto:info@berbere-caravane.ma">info@berbere-caravane.ma</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-divider" aria-hidden="true"></div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4A438" stroke-width="2" stroke-linecap="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="info-label">Adresse</div>
+              <div class="info-value">N°333, Lot Roumiia, Askejour<br>40000 Marrakech, Maroc</div>
+            </div>
+          </div>
+
+          <div class="info-divider" aria-hidden="true"></div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4A438" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <div class="info-label">Horaires</div>
+              <div class="info-value">Lun — Sam : 08h00 – 19h00<br>Dimanche : sur rendez-vous</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="map-container" aria-label="Carte Marrakech">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54879.38789226054!2d-8.038022!3d31.628674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech%2C%20Maroc!5e0!3m2!1sfr!2sfr!4v1715000000000"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation Marrakech"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- RESPONSE TIME -->
+      <div class="response-badge" role="status">
+        <div class="response-dot"></div>
+        <div class="response-text"><strong>Réponse sous 24h</strong></div>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- Z-BAND -->
+<div class="z-band" id="z-band-mid" aria-hidden="true"></div>
+
+<!-- FAQ -->
+<section class="faq-section" aria-labelledby="faq-title">
+  <div class="faq-inner">
+    <div class="faq-kicker">Questions fréquentes</div>
+    <h2 class="faq-title" id="faq-title">Tout ce que vous voulez savoir</h2>
+    <div class="faq-div"></div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Comment réserver une excursion ?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="0" x2="5" y2="10"/><line x1="0" y1="5" x2="10" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Remplissez le formulaire ci-dessus ou contactez-nous directement via WhatsApp. Nous vous envoyons un devis détaillé sous 24h.</div></div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Quelle est la meilleure période pour visiter le Maroc ?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="0" x2="5" y2="10"/><line x1="0" y1="5" x2="10" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Pour le Haut Atlas (Toubkal, M'goun) : avril–juin et septembre–novembre. Pour le désert de Merzouga : octobre–avril (évitez l'été, +45°C). Pour les villes impériales et la côte : toute l'année, avec préférence pour mars–mai et sept–nov.</div></div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Proposez-vous des circuits sur mesure ?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="0" x2="5" y2="10"/><line x1="0" y1="5" x2="10" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Absolument. Chaque itinéraire est construit selon vos envies : durée, rythme, hébergement (bivouac, gîte, riad ou hôtel), niveau sportif, centres d'intérêt. Indiquez vos préférences dans le formulaire et nous vous soumettons un programme personnalisé.</div></div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Les transferts depuis Marrakech sont-ils inclus ?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="0" x2="5" y2="10"/><line x1="0" y1="5" x2="10" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Oui, le transport depuis/vers Marrakech est inclus dans tous nos circuits multi-jours. Pour les excursions à la journée, le départ se fait en minibus privé depuis votre hébergement à Marrakech.</div></div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Vos guides sont-ils certifiés ?
+          <span class="faq-icon" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="0" x2="5" y2="10"/><line x1="0" y1="5" x2="10" y2="5"/></svg></span>
+        </button>
+        <div class="faq-a" role="region"><div class="faq-a-inner">Tous nos guides sont brevetés d'État, formés au Centre des Métiers de Montagne de Tabant. Nés dans les vallées qu'ils vous font découvrir, ils parlent français, arabe et tamazight (berbère). Hassan (guide montagne) cumule 15 ans sur le Toubkal.</div></div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="logo" aria-label="Berbère Caravane">
+        <img src="LOGO.jpeg" alt="Berbère Caravane" class="logo-img logo-img-sm">
+      </a>
+      <p class="footer-desc">Agence de treks et excursions au Maroc depuis Marrakech. Guides certifiés, circuits sur mesure, hospitalité berbère authentique.</p>
+    </div>
+    <div>
+      <div class="f-col-title">Excursions</div>
+      <ul class="f-links">
+        <li><a href="excursion-haut-atlas.html">Ascension du Toubkal</a></li>
+        <li><a href="excursion-desert-sud.html">Dunes de Merzouga</a></li>
+        <li><a href="excursion-journee.html">Vallée de l'Ourika</a></li>
+        <li><a href="excursion-voyages.html">Villes Impériales</a></li>
+        <li><a href="excursion-theme.html">Chemins des Caravanes</a></li>
+        <li><a href="excursion-cote-atlantique.html">Essaouira — Thalasso</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title">Blog</div>
+      <ul class="f-links">
+        <li><a href="blog-randonnees.html">10 belles randonnées</a></li>
+        <li><a href="blog-toubkal.html">Guide Trek Toubkal</a></li>
+        <li><a href="blog-merzouga.html">Guide Désert Merzouga</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-col-title">Contact</div>
+      <address style="font-style:normal;font-size:.815rem;color:rgba(245,238,216,.55);line-height:1.75;">
+        <p>N°333, Lot Roumiia, Askejour<br>40000 Marrakech, Maroc</p>
+        <p style="margin-top:10px;"><a href="tel:+212662132973" style="color:var(--gold);">+212 662 132 973</a></p>
+        <p><a href="mailto:info@berbere-caravane.ma" style="color:var(--gold);">info@berbere-caravane.ma</a></p>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Berbère Caravane — Tous droits réservés</p>
+    <p class="footer-copy">Marrakech, Maroc</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP BUBBLE -->
+<a href="https://wa.me/212662132973?text=Bonjour%2C+je+veux+organiser+un+voyage+au+Maroc."
+   class="wa-bubble" target="_blank" rel="noopener noreferrer"
+   aria-label="Contacter Berbère Caravane sur WhatsApp">
+  <span class="wa-icon" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+  </span>
+  <span class="wa-label">
+    <span class="wa-label-top">Réserver via</span>
+    <span>WhatsApp</span>
+  </span>
+</a>
+
+<script>
+(function(){
+  'use strict';
+
+  function zellige(bg,gold,op){var sz=240,cx=120,cy=120,N=12,a=op||0.14;function p(ang,r){var rad=(ang-90)*Math.PI/180;return(cx+r*Math.cos(rad)).toFixed(1)+','+(cy+r*Math.sin(rad)).toFixed(1);}function poly(pts,op2){return'<polygon points="'+pts+'" fill="'+gold+'" fill-opacity="'+op2+'" stroke="none"/>';}var s=[];for(var i=0;i<N;i++){var b=i*30;s.push(poly([p(b-9,98),p(b+9,98),p(b+12,82),p(b,75),p(b-12,82)].join(' '),a*0.5));}for(var i=0;i<N;i++){var b=i*30+15;s.push(poly([p(b,66),p(b+7,53),p(b,40),p(b-7,53)].join(' '),a*0.85));}for(var i=0;i<N;i++){var b=i*30;s.push(poly([p(b,38),p(b-4.5,15),p(b+4.5,15)].join(' '),a*1.1));}for(var i=0;i<N;i++){var b=i*30+15;s.push(poly([p(b,28),p(b-3,15),p(b+3,15)].join(' '),a*0.75));}s.push('<circle cx="'+cx+'" cy="'+cy+'" r="12" fill="'+gold+'" fill-opacity="'+(a*1.5)+'" stroke="none"/>');return'<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'"><rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>'+s.join('')+'</svg>';}
+  function zelligeBg(s){return 'url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s)+'")';}
+
+  var bodyBg = zelligeBg(zellige('#1A1208','#D4A438',0.16));
+  document.body.style.backgroundImage = bodyBg;
+  document.body.style.backgroundRepeat = 'repeat';
+  document.body.style.backgroundSize = '240px 240px';
+
+  var zDark = zelligeBg(zellige('#1A1208','#D4A438',0.38));
+  var zLight = zelligeBg(zellige('#F5EED8','#E8722A',0.42));
+  function applyZ(id,bg){var el=document.getElementById(id);if(!el)return;el.style.backgroundImage=bg;el.style.backgroundRepeat='repeat';el.style.backgroundSize='240px 240px';}
+  applyZ('z-band-top', zLight);
+  applyZ('z-band-mid', zDark);
+
+  /* Hero photo */
+  function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")';el.style.backgroundSize='cover';el.style.backgroundPosition='center';};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")';el.style.backgroundSize='cover';el.style.backgroundPosition='center';};i2.src=f;}};img.src=src;}
+  loadBg('hero-photo','oasis-palmeraie.jpg','https://images.unsplash.com/photo-1539020140153-e479b8f22986?w=1800&q=80','#3a2810');
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){
+        o.classList.remove('open');
+        o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+      if(!open){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  /* Form submit handler */
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var msg = document.getElementById('f-message').value.trim();
+    if(!name || !email || !msg){ alert('Merci de remplir les champs obligatoires.'); return; }
+    var excursion = document.getElementById('f-excursion').value;
+    var phone = document.getElementById('f-phone').value;
+    var text = encodeURIComponent('Bonjour, je suis ' + name + ' (' + email + (phone ? ', ' + phone : '') + ').'
+      + (excursion ? ' Je suis intéressé(e) par : ' + excursion + '.' : '')
+      + ' ' + document.getElementById('f-message').value);
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+    setTimeout(function(){
+      window.open('https://wa.me/212662132973?text=' + text, '_blank');
+    }, 800);
+  });
+})();
+</script>
+</body>
+</html>
