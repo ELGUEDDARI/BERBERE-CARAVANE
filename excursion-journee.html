@@ -118,9 +118,16 @@
     .mob-phone { margin-top: 22px; text-align: center; font-size: 0.8rem; color: rgba(245,238,216,0.4); letter-spacing: 0.1em; }
     @media (max-width: 768px) { .mob-btn { display: flex; } }
 
+        .fc{position:fixed;width:90px;height:90px;z-index:9998;pointer-events:none;background:url('zalij2.jpeg') no-repeat;background-size:580px 790px;opacity:0.92;}
+    .fc-tl{top:0;left:0;background-position:left top;}
+    .fc-tr{top:0;right:0;background-position:right top;}
+    .fc-bl{bottom:0;left:0;background-position:left bottom;}
+    .fc-br{bottom:0;right:0;background-position:right bottom;}
+    @media(max-width:768px){.fc{width:55px;height:55px;background-size:355px 480px;opacity:0.85;}}
   </style>
 </head>
 <body>
+<div class="fc fc-tl"></div><div class="fc fc-tr"></div><div class="fc fc-bl"></div><div class="fc fc-br"></div>
 
 <header class="site-header">
   <a href="index.html" class="logo" aria-label="Berbère Caravane — Accueil">
