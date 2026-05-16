@@ -85,6 +85,49 @@
     .wa-lbl{display:flex;flex-direction:column;line-height:1.2;}
     .wa-lbl-top{font-size:0.66rem;opacity:0.82;font-weight:500;}
     @media(max-width:768px){.site-header{padding:0 22px;}.site-nav{display:none;}.page-hero{height:380px;}.page-hero-content{padding:40px 22px;}.page-content{padding:48px 22px;}.two-col{grid-template-columns:1fr;}.sidebar{position:static;}}
+
+    /* ========== MENU MOBILE ========== */
+    .mob-btn {
+      display: none; flex-direction: column; justify-content: center; align-items: center;
+      width: 44px; height: 44px; gap: 5px;
+      background: none; border: 1px solid rgba(212,164,56,0.3); border-radius: 4px;
+      cursor: pointer; padding: 10px; z-index: 210; flex-shrink: 0;
+    }
+    .mob-btn span {
+      display: block; width: 22px; height: 2px;
+      background: var(--sand); border-radius: 2px;
+      transition: transform 0.35s ease, opacity 0.25s ease;
+      transform-origin: center;
+    }
+    .mob-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .mob-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .mob-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mob-overlay {
+      position: fixed; inset: 0; z-index: 205;
+      background: rgba(20,12,4,0.98);
+      display: flex; flex-direction: column;
+      padding: 96px 36px 52px;
+      transform: translateX(100%);
+      transition: transform 0.42s cubic-bezier(0.77,0,0.175,1);
+      overflow-y: auto;
+    }
+    .mob-overlay.open { transform: translateX(0); }
+    .mob-nav-links { display: flex; flex-direction: column; border-top: 1px solid rgba(212,164,56,0.2); }
+    .mob-nav-links a {
+      font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700;
+      color: var(--sand); padding: 20px 0;
+      border-bottom: 1px solid rgba(212,164,56,0.13);
+      transition: color 0.2s, padding-left 0.25s;
+    }
+    .mob-nav-links a:hover { color: var(--gold); padding-left: 14px; }
+    .mob-wa {
+      margin-top: 40px; display: flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 17px 28px; background: #25D366; color: #fff;
+      border-radius: 999px; font-weight: 700; font-size: 1rem;
+    }
+    .mob-phone { margin-top: 22px; text-align: center; font-size: 0.8rem; color: rgba(245,238,216,0.4); letter-spacing: 0.1em; }
+    @media (max-width: 768px) { .mob-btn { display: flex; } }
+
   </style>
 </head>
 <body>
@@ -100,7 +143,26 @@
     <a href="contact.html">Contact</a>
     <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+l%27ascension+du+Toubkal." class="nav-cta" target="_blank" rel="noopener">Réserver</a>
   </nav>
+  <button class="mob-btn" id="mob-btn" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </header>
+
+<!-- MENU MOBILE OVERLAY -->
+<div class="mob-overlay" id="mob-overlay" role="dialog" aria-modal="true" aria-label="Navigation mobile">
+  <nav class="mob-nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#excursions">Excursions</a>
+    <a href="index.html#equipe">Équipe</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+vos+excursions+au+Maroc." class="mob-wa" target="_blank" rel="noopener noreferrer">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+    Réserver via WhatsApp
+  </a>
+  <p class="mob-phone">+212 662 132 973</p>
+</div>
 
 <div class="page-hero">
   <div class="page-hero-photo" id="hero-photo" role="img" aria-label="Sommet du Toubkal enneigé, Haut Atlas marocain"></div>
@@ -291,6 +353,26 @@
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
   loadBg('hero-photo','toubkal-sunset.jpg','https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80','#2a1a08');
 })();
+  /* MENU MOBILE */
+  var mobBtn     = document.getElementById('mob-btn');
+  var mobOverlay = document.getElementById('mob-overlay');
+  if (mobBtn && mobOverlay) {
+    function toggleMenu(forceClose) {
+      var open = forceClose ? false : !mobOverlay.classList.contains('open');
+      mobOverlay.classList.toggle('open', open);
+      mobBtn.classList.toggle('open', open);
+      mobBtn.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    mobBtn.addEventListener('click', function() { toggleMenu(); });
+    mobOverlay.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() { toggleMenu(true); });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') toggleMenu(true);
+    });
+  }
+
 </script>
 </body>
 </html>
