@@ -90,7 +90,7 @@
       box-shadow: 8px 8px 0 rgba(0,0,0,0.5), 0 24px 64px rgba(0,0,0,0.6);
       will-change: width, height, border-radius;
     }
-    #hero-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    #hero-frame img, #hero-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
     #hero-badge {
       position: absolute; bottom: 18px; left: 18px; z-index: 5;
       background: var(--orange); color: var(--sand);
@@ -461,13 +461,14 @@
     <h2 class="hero-title" id="htr" aria-hidden="true">Caravane</h2>
     <h1 class="sr-only">Berbère Caravane — Treks &amp; Excursions au Maroc depuis Marrakech</h1>
 
-    <div id="hero-frame" role="img" aria-label="Touareg sur chameau dans les dunes du Sahara, Maroc">
-      <img
-        src="AZ.jpeg"
-        onerror="this.src='https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1800&q=80'"
-        alt="Guide berbère en djellaba bleue sur chameau dans les dunes de l'Erg Chebbi"
-        width="800" height="1066" loading="eager"
+    <div id="hero-frame" aria-label="Animation berbère dans les dunes du Sahara, Maroc">
+      <video
+        autoplay muted loop playsinline
+        preload="auto"
+        aria-hidden="true"
       >
+        <source src="hero-video.mp4" type="video/mp4">
+      </video>
       <div id="hero-badge">Atlas · Sahara · Maroc</div>
     </div>
 
