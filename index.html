@@ -411,16 +411,10 @@
     }
     .mob-phone { margin-top: 22px; text-align: center; font-size: 0.8rem; color: rgba(245,238,216,0.4); letter-spacing: 0.1em; }
     @media (max-width: 768px) { .mob-btn { display: flex; } }
-        .fc{position:fixed;width:90px;height:90px;z-index:9998;pointer-events:none;background:url('zalij2.jpeg') no-repeat;background-size:580px 790px;opacity:0.92;}
-    .fc-tl{top:0;left:0;background-position:left top;}
-    .fc-tr{top:0;right:0;background-position:right top;}
-    .fc-bl{bottom:0;left:0;background-position:left bottom;}
-    .fc-br{bottom:0;right:0;background-position:right bottom;}
-    @media(max-width:768px){.fc{width:55px;height:55px;background-size:355px 480px;opacity:0.85;}}
   </style>
 </head>
 <body>
-<div class="fc fc-tl"></div><div class="fc fc-tr"></div><div class="fc fc-bl"></div><div class="fc fc-br"></div>
+
 
 <!-- HEADER -->
 <header class="site-header">
@@ -918,42 +912,18 @@
   'use strict';
 
   /* ZELLIGE ARABESQUE — motif marocain 12 branches authentique */
-  /* Zellige marocain — formes remplies, style tuile authentique */
+  /* Étoile zellige marocaine à 8 branches */
   function zellige(bg, gold, op) {
-    var sz = 240, cx = 120, cy = 120, N = 12, a = op || 0.14;
-    function p(ang, r) {
-      var rad = (ang - 90) * Math.PI / 180;
-      return (cx + r * Math.cos(rad)).toFixed(1) + ',' + (cy + r * Math.sin(rad)).toFixed(1);
+    var sz = 120, cx = 60, cy = 60, pts = [];
+    for (var i = 0; i < 16; i++) {
+      var ang = (i * 22.5 - 90) * Math.PI / 180;
+      var r = (i % 2 === 0) ? 44 : 18;
+      pts.push((cx + r * Math.cos(ang)).toFixed(1) + ',' + (cy + r * Math.sin(ang)).toFixed(1));
     }
-    function poly(pts, op2) {
-      return '<polygon points="' + pts + '" fill="' + gold + '" fill-opacity="' + op2 + '" stroke="none"/>';
-    }
-    var s = [];
-    /* 1. Boucliers extérieurs (12 pentagones) */
-    for (var i = 0; i < N; i++) {
-      var b = i * 30;
-      s.push(poly([p(b-9,98),p(b+9,98),p(b+12,82),p(b,75),p(b-12,82)].join(' '), a*0.5));
-    }
-    /* 2. Losanges médians (12, décalés 15°) */
-    for (var i = 0; i < N; i++) {
-      var b = i * 30 + 15;
-      s.push(poly([p(b,66),p(b+7,53),p(b,40),p(b-7,53)].join(' '), a*0.85));
-    }
-    /* 3. Branches longues de l'étoile (12) */
-    for (var i = 0; i < N; i++) {
-      var b = i * 30;
-      s.push(poly([p(b,38),p(b-4.5,15),p(b+4.5,15)].join(' '), a*1.1));
-    }
-    /* 4. Branches courtes de l'étoile (12, décalées 15°) */
-    for (var i = 0; i < N; i++) {
-      var b = i * 30 + 15;
-      s.push(poly([p(b,28),p(b-3,15),p(b+3,15)].join(' '), a*0.75));
-    }
-    /* 5. Disque central */
-    s.push('<circle cx="'+cx+'" cy="'+cy+'" r="12" fill="'+gold+'" fill-opacity="'+(a*1.5)+'" stroke="none"/>');
-    return '<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'">'
-      +'<rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>'
-      +s.join('')+'</svg>';
+    var star = '<polygon points="' + pts.join(' ') + '" fill="' + gold + '" fill-opacity="' + (op * 0.2) + '" stroke="' + gold + '" stroke-width="0.8" stroke-opacity="' + op + '"/>';
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="' + sz + '" height="' + sz + '">'
+      + '<rect width="' + sz + '" height="' + sz + '" fill="' + bg + '"/>'
+      + star + '</svg>';
   }
 
   function zelligeBg(svgStr) {
@@ -964,7 +934,7 @@
   var bodyBg = zelligeBg(zellige('#1A1208', '#D4A438', 0.16));
   document.body.style.backgroundImage = bodyBg;
   document.body.style.backgroundRepeat = 'repeat';
-  document.body.style.backgroundSize = '240px 240px';
+  document.body.style.backgroundSize = '120px 120px';
 
   /* Z-bands */
   var zDark  = zelligeBg(zellige('#1A1208', '#D4A438', 0.38));

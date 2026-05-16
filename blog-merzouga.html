@@ -130,7 +130,7 @@
   </style>
 </head>
 <body>
-<div class="fc fc-tl"></div><div class="fc fc-tr"></div><div class="fc fc-bl"></div><div class="fc fc-br"></div>
+
 <header class="site-header">
   <a href="index.html" class="logo" aria-label="Berbère Caravane — Accueil">
     <img src="LOGO.jpeg" alt="Berbère Caravane" class="logo-img">
@@ -302,10 +302,10 @@
 </a>
 <script>
 (function(){
-  function zellige(bg,gold,op){var sz=240,cx=120,cy=120,N=12,a=op||0.14;function p(ang,r){var rad=(ang-90)*Math.PI/180;return(cx+r*Math.cos(rad)).toFixed(1)+','+(cy+r*Math.sin(rad)).toFixed(1);}function poly(pts,op2){return'<polygon points="'+pts+'\" fill="'+gold+'\" fill-opacity="'+op2+'\" stroke="none"/>';}var s=[];for(var i=0;i<N;i++){var b=i*30;s.push(poly([p(b-9,98),p(b+9,98),p(b+12,82),p(b,75),p(b-12,82)].join(' '),a*0.5));}for(var i=0;i<N;i++){var b=i*30+15;s.push(poly([p(b,66),p(b+7,53),p(b,40),p(b-7,53)].join(' '),a*0.85));}for(var i=0;i<N;i++){var b=i*30;s.push(poly([p(b,38),p(b-4.5,15),p(b+4.5,15)].join(' '),a*1.1));}for(var i=0;i<N;i++){var b=i*30+15;s.push(poly([p(b,28),p(b-3,15),p(b+3,15)].join(' '),a*0.75));}s.push('<circle cx="'+cx+'\" cy="'+cy+'\" r="12\" fill="'+gold+'\" fill-opacity="'+(a*1.5)+'\" stroke="none"/>');return'<svg xmlns="http://www.w3.org/2000/svg\" width="'+sz+'\" height="'+sz+'"><rect width="'+sz+'\" height="'+sz+'\" fill="'+bg+'\"/>'+s.join('')+'</svg>';}
+  function zellige(bg,gold,op){var sz=120,cx=60,cy=60,pts=[];for(var i=0;i<16;i++){var a=(i*22.5-90)*Math.PI/180;var r=i%2===0?44:18;pts.push((cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1));}var star='<polygon points="'+pts.join(' ')+'" fill="'+gold+'" fill-opacity="'+(op*0.2)+'" stroke="'+gold+'" stroke-width="0.8" stroke-opacity="'+op+'"/>';return'<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'"><rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>'+star+'</svg>';}
   function zbg(svg){return'url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)+'")';}
   var bb=zbg(zellige('#1A1208','#D4A438',0.16));
-  document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='240px 240px';
+  document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='120px 120px';
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
   loadBg('hero-photo','desert-sunset.jpg','https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1800&q=80','#7a3a10');
 })();
