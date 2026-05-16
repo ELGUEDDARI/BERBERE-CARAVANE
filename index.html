@@ -124,7 +124,8 @@
     .s-div.c { margin-left: auto; margin-right: auto; }
 
     /* ZELLIGE BANDS */
-    .z-band { height: 44px; background-repeat: repeat-x; background-size: 160px 44px; }
+    .z-band { height: 44px; background-repeat: repeat-x; background-size: 200px 200px; }
+    .z-band-photo { height: 60px; background: url('zalij2.jpeg') repeat-x center top / 320px 430px; opacity: 0.82; }
 
     /* REASONS */
     .reasons-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; margin-top: 56px; }
@@ -486,7 +487,7 @@
 </div>
 
 <!-- ZELLIGE BAND -->
-<div class="z-band" id="z-band-1" aria-hidden="true"></div>
+<div class="z-band-photo" aria-hidden="true"></div>
 
 <!-- POURQUOI NOUS -->
 <section class="sw sand" id="raisons" aria-labelledby="raisons-title">
@@ -611,7 +612,7 @@
 </section>
 
 <!-- ZELLIGE BAND -->
-<div class="z-band" id="z-band-3" aria-hidden="true"></div>
+<div class="z-band-photo" aria-hidden="true"></div>
 
 <!-- NOTRE ÉQUIPE -->
 <section class="sw sand" id="equipe" aria-labelledby="equipe-title">
@@ -753,7 +754,7 @@
 </section>
 
 <!-- ZELLIGE BAND -->
-<div class="z-band" id="z-band-4" aria-hidden="true"></div>
+<div class="z-band-photo" aria-hidden="true"></div>
 
 <!-- PHOTO STRIP DÉFILANT -->
 <div class="photo-strip-wrap" aria-hidden="true">
@@ -912,18 +913,44 @@
   'use strict';
 
   /* ZELLIGE ARABESQUE — motif marocain 12 branches authentique */
-  /* Étoile zellige marocaine à 8 branches */
+  /* Zellige marocain authentique — étoile à 8 branches entrelacée */
   function zellige(bg, gold, op) {
-    var sz = 120, cx = 60, cy = 60, pts = [];
-    for (var i = 0; i < 16; i++) {
-      var ang = (i * 22.5 - 90) * Math.PI / 180;
-      var r = (i % 2 === 0) ? 44 : 18;
-      pts.push((cx + r * Math.cos(ang)).toFixed(1) + ',' + (cy + r * Math.sin(ang)).toFixed(1));
+    var sz = 200, half = 100;
+    var R = 52, r = 21; /* rayons extérieur / intérieur de l'étoile */
+    function star8(cx, cy, fillCol, fillOp, strokeCol, strokeOp) {
+      var pts = [];
+      for (var i = 0; i < 16; i++) {
+        var a = (i * 22.5 - 90) * Math.PI / 180;
+        var rad = (i % 2 === 0) ? R : r;
+        pts.push((cx + rad * Math.cos(a)).toFixed(1) + ',' + (cy + rad * Math.sin(a)).toFixed(1));
+      }
+      var p = pts.join(' ');
+      var s = '';
+      if (fillOp > 0) s += '<polygon points="' + p + '" fill="' + fillCol + '" fill-opacity="' + fillOp + '"/>';
+      if (strokeOp > 0) s += '<polygon points="' + p + '" fill="none" stroke="' + strokeCol + '" stroke-width="1" stroke-opacity="' + strokeOp + '"/>';
+      return s;
     }
-    var star = '<polygon points="' + pts.join(' ') + '" fill="' + gold + '" fill-opacity="' + (op * 0.2) + '" stroke="' + gold + '" stroke-width="0.8" stroke-opacity="' + op + '"/>';
-    return '<svg xmlns="http://www.w3.org/2000/svg" width="' + sz + '" height="' + sz + '">'
-      + '<rect width="' + sz + '" height="' + sz + '" fill="' + bg + '"/>'
-      + star + '</svg>';
+    var blue = '#1E4F9C', teal = '#0D6B5A', amber = gold;
+    var a = op;
+    var out = '<rect width="' + sz + '" height="' + sz + '" fill="' + bg + '"/>';
+    /* Étoile centrale — bleue avec contour or */
+    out += star8(half, half, blue, a * 1.8, amber, a * 2.2);
+    /* Octogone central — or */
+    var octPts = [];
+    for (var i = 0; i < 8; i++) {
+      var a2 = (i * 45 - 22.5 - 90) * Math.PI / 180;
+      octPts.push((half + 22 * Math.cos(a2)).toFixed(1) + ',' + (half + 22 * Math.sin(a2)).toFixed(1));
+    }
+    out += '<polygon points="' + octPts.join(' ') + '" fill="' + amber + '" fill-opacity="' + (a * 1.6) + '"/>';
+    /* Quart d'étoile aux 4 coins — teal, crée l'entrelacement quand on tile */
+    [[0,0],[sz,0],[0,sz],[sz,sz]].forEach(function(c) {
+      out += star8(c[0], c[1], teal, a * 0.9, amber, a * 1.2);
+    });
+    /* Demi-étoile sur les 4 bords */
+    [[half,0],[half,sz],[0,half],[sz,half]].forEach(function(c) {
+      out += star8(c[0], c[1], blue, a * 0.7, amber, a * 0.9);
+    });
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="' + sz + '" height="' + sz + '">' + out + '</svg>';
   }
 
   function zelligeBg(svgStr) {
@@ -931,14 +958,14 @@
   }
 
   /* Fond global du site */
-  var bodyBg = zelligeBg(zellige('#1A1208', '#D4A438', 0.16));
+  var bodyBg = zelligeBg(zellige('#1A1208', '#D4A438', 0.07));
   document.body.style.backgroundImage = bodyBg;
   document.body.style.backgroundRepeat = 'repeat';
-  document.body.style.backgroundSize = '120px 120px';
+  document.body.style.backgroundSize = '200px 200px';
 
   /* Z-bands */
-  var zDark  = zelligeBg(zellige('#1A1208', '#D4A438', 0.38));
-  var zLight = zelligeBg(zellige('#F5EED8', '#E8722A', 0.42));
+  var zDark  = zelligeBg(zellige('#1A1208', '#D4A438', 0.22));
+  var zLight = zelligeBg(zellige('#F5EED8', '#E8722A', 0.20));
 
   function applyZ(id, bg, repeat) {
     var el = document.getElementById(id);

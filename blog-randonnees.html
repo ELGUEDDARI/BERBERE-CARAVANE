@@ -307,10 +307,10 @@
 </a>
 <script>
 (function(){
-  function zellige(bg,gold,op){var sz=120,cx=60,cy=60,pts=[];for(var i=0;i<16;i++){var a=(i*22.5-90)*Math.PI/180;var r=i%2===0?44:18;pts.push((cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1));}var star='<polygon points="'+pts.join(' ')+'" fill="'+gold+'" fill-opacity="'+(op*0.2)+'" stroke="'+gold+'" stroke-width="0.8" stroke-opacity="'+op+'"/>';return'<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'"><rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>'+star+'</svg>';}
+  function zellige(bg,gold,op){var sz=200,half=100,R=52,r=21;function star8(cx,cy,fillCol,fillOp,strokeCol,strokeOp){var pts=[];for(var i=0;i<16;i++){var a=(i*22.5-90)*Math.PI/180;var rad=i%2===0?R:r;pts.push((cx+rad*Math.cos(a)).toFixed(1)+','+(cy+rad*Math.sin(a)).toFixed(1));}var p=pts.join(' ');var s='';if(fillOp>0)s+='<polygon points="'+p+'" fill="'+fillCol+'" fill-opacity="'+fillOp+'"/>';if(strokeOp>0)s+='<polygon points="'+p+'" fill="none" stroke="'+strokeCol+'" stroke-width="1" stroke-opacity="'+strokeOp+'"/>';return s;}var blue='#1E4F9C',teal='#0D6B5A',amber=gold,a=op,out='<rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>';out+=star8(half,half,blue,a*1.8,amber,a*2.2);var octPts=[];for(var i=0;i<8;i++){var a2=(i*45-22.5-90)*Math.PI/180;octPts.push((half+22*Math.cos(a2)).toFixed(1)+','+(half+22*Math.sin(a2)).toFixed(1));}out+='<polygon points="'+octPts.join(' ')+'" fill="'+amber+'" fill-opacity="'+(a*1.6)+'"/>';[[0,0],[sz,0],[0,sz],[sz,sz]].forEach(function(c){out+=star8(c[0],c[1],teal,a*0.9,amber,a*1.2);});[[half,0],[half,sz],[0,half],[sz,half]].forEach(function(c){out+=star8(c[0],c[1],blue,a*0.7,amber,a*0.9);});return'<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'">'+out+'</svg>';}
   function zbg(svg){return'url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)+'")';}
-  var bb=zbg(zellige('#1A1208','#D4A438',0.16));
-  document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='120px 120px';
+  var bb=zbg(zellige('#1A1208','#D4A438',0.07));
+  document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='200px 200px';
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
   loadBg('hero-photo','cathedrale-tamga.jpg','https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=1800&q=80','#5a3a28');
 })();
