@@ -157,24 +157,42 @@
     .exc-cat-cta { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em; color: var(--orange); text-transform: uppercase; border-bottom: 1px solid rgba(232,114,42,0.45); padding-bottom: 1px; align-self: flex-start; transition: color 0.2s, border-color 0.2s; }
     .exc-cat-cta:hover { color: var(--sand); border-color: var(--sand); }
 
-    /* TEAM */
-    .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; margin-top: 56px; }
-    .team-card { text-align: center; }
-    .team-photo {
-      width: 180px; height: 180px; margin: 0 auto 20px;
+    /* MOT DU FONDATEUR */
+    .founder-wrap {
+      display: flex; align-items: center; gap: 64px;
+      margin-top: 56px; max-width: 960px;
+    }
+    .founder-photo {
+      flex-shrink: 0;
+      width: 220px; height: 220px;
       background-size: cover; background-position: center top;
       border-radius: 50%;
       border: 4px solid var(--gold);
-      box-shadow: 0 0 0 3px rgba(212,164,56,0.22), 0 10px 32px rgba(0,0,0,0.55);
-      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 0 0 6px rgba(212,164,56,0.18), 0 16px 48px rgba(0,0,0,0.45);
     }
-    .team-card:hover .team-photo {
-      transform: scale(1.04);
-      box-shadow: 0 0 0 5px rgba(212,164,56,0.38), 0 14px 40px rgba(0,0,0,0.65);
+    .founder-quote-wrap { flex: 1; }
+    .founder-quote-icon {
+      font-size: 5rem; line-height: 1; color: var(--gold); opacity: 0.35;
+      font-family: 'Playfair Display', serif; margin-bottom: -16px; display: block;
     }
-    .team-name { font-family: 'Playfair Display', serif; font-size: 0.98rem; font-weight: 700; margin-bottom: 4px; }
-    .team-role { font-size: 0.75rem; color: var(--orange); font-weight: 500; margin-bottom: 3px; }
-    .team-from { font-size: 0.7rem; color: var(--text-muted); }
+    .founder-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.08rem; font-style: italic;
+      color: var(--text-dark); line-height: 1.85;
+      border-left: 3px solid var(--gold);
+      padding-left: 24px; margin: 0 0 28px;
+    }
+    .founder-sig { display: flex; flex-direction: column; padding-left: 27px; }
+    .founder-sig-name {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem;
+      font-weight: 700; color: var(--text-dark);
+    }
+    .founder-sig-role { font-size: 0.78rem; color: var(--orange); font-weight: 500; margin-top: 3px; }
+    @media (max-width: 768px) {
+      .founder-wrap { flex-direction: column; align-items: center; gap: 36px; text-align: center; }
+      .founder-quote { border-left: none; padding-left: 0; border-top: 3px solid var(--gold); padding-top: 20px; }
+      .founder-sig { align-items: center; padding-left: 0; }
+    }
 
     /* VALUES */
     .values-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; margin-top: 56px; max-width: 960px; }
@@ -246,7 +264,7 @@
 
     /* RESPONSIVE */
     @media (max-width: 1024px) {
-      .reasons-grid, .team-grid { grid-template-columns: repeat(2,1fr); }
+      .reasons-grid { grid-template-columns: repeat(2,1fr); }
       .exc-grid, .blog-grid, .testi-grid { grid-template-columns: repeat(2,1fr); }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
     }
@@ -254,7 +272,7 @@
       .sw { padding: 64px 20px; }
       .site-header { padding: 0 16px; }
       .site-nav { display: none; }
-      .reasons-grid, .team-grid, .exc-grid, .blog-grid, .testi-grid { grid-template-columns: 1fr; }
+      .reasons-grid, .exc-grid, .blog-grid, .testi-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .values-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -614,36 +632,29 @@
 <!-- ZELLIGE BAND -->
 <div class="z-band-photo" aria-hidden="true"></div>
 
-<!-- NOTRE ÉQUIPE -->
+<!-- MOT DU FONDATEUR -->
 <section class="sw sand" id="equipe" aria-labelledby="equipe-title">
   <div class="inner">
-    <div class="kicker">Notre équipe</div>
-    <h2 id="equipe-title" class="s-title">Des guides nés<br>au cœur du Maroc</h2>
+    <div class="kicker">Mot du Fondateur</div>
+    <h2 id="equipe-title" class="s-title">Une passion née<br>au cœur du Maroc</h2>
     <div class="s-div"></div>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-photo" id="tp-1" role="img" aria-label="Mohamed, guide des espaces naturels"></div>
-        <div class="team-name">Mohamed</div>
-        <div class="team-role">Guide des espaces naturels</div>
-        <div class="team-from">Haut Atlas</div>
-      </div>
-      <div class="team-card">
-        <div class="team-photo" id="tp-2" role="img" aria-label="Abdel, chef cuisinier"></div>
-        <div class="team-name">Abdel</div>
-        <div class="team-role">Chef Cuisinier</div>
-        <div class="team-from">Marrakech</div>
-      </div>
-      <div class="team-card">
-        <div class="team-photo" id="tp-3" role="img" aria-label="Driss, muletier"></div>
-        <div class="team-name">Driss</div>
-        <div class="team-role">Muletier</div>
-        <div class="team-from">Vallée d'Aït Bougmez</div>
-      </div>
-      <div class="team-card">
-        <div class="team-photo" id="tp-4" role="img" aria-label="Mohamed, gérant"></div>
-        <div class="team-name">Mohamed</div>
-        <div class="team-role">Gérant</div>
-        <div class="team-from">Marrakech</div>
+    <div class="founder-wrap">
+      <div class="founder-photo" id="tp-4" role="img" aria-label="Mohamed El Gueddari, fondateur de Caravane Berbère"></div>
+      <div class="founder-quote-wrap">
+        <span class="founder-quote-icon">"</span>
+        <p class="founder-quote">
+          Né dans les ruelles de Marrakech, j'ai toujours eu le Haut Atlas devant les yeux.
+          Enfant, je regardais les guides revenir des montagnes avec cette lumière particulière
+          dans le regard — celle de ceux qui ont marché là où peu de gens osent aller.<br><br>
+          Caravane Berbère est née de cette conviction : les plus belles rencontres ne se réservent
+          pas en ligne, elles se vivent à pied, au rythme des mules, sous les étoiles du désert.
+          Nous ne vendons pas du tourisme — nous partageons un héritage.<br><br>
+          Chaque voyageur qui repart avec un sourire est, pour moi, la plus belle des récompenses.
+        </p>
+        <div class="founder-sig">
+          <span class="founder-sig-name">Mohamed</span>
+          <span class="founder-sig-role">Fondateur &amp; Gérant — Caravane Berbère</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1016,25 +1027,7 @@
   loadBg('ep-caravanes', 'desert-route.jpg', 'https://images.unsplash.com/photo-1577147443647-81856d5151af?w=900&q=80', '#a6602e');
   loadBg('ep-essaouira', 'cote-atlantique.jpg', 'https://images.unsplash.com/photo-1605649461784-edc01e3a6c5b?w=900&q=80', '#3e6577');
 
-  loadBg('tp-1', 'equipe-1-guide.png',    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80', '#6b4a35');
-  loadBg('tp-2', 'equipe-2-chef.png',     'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=80', '#7a5440');
   loadBg('tp-4', 'equipe-4-gerant.png',   'https://images.unsplash.com/photo-1463453091185-61582044d556?w=500&q=80', '#6f4f3a');
-  /* Driss — photo recadrée depuis capture d'écran, zoom ciblé sur le muletier */
-  (function(){
-    var el = document.getElementById('tp-3');
-    if (!el) return;
-    el.style.backgroundColor = '#5a4030';
-    var img = new Image();
-    img.onload = function() {
-      el.style.backgroundImage = 'url("equipe-3-muletier.png")';
-      el.style.backgroundSize = '230%';
-      el.style.backgroundPosition = '48% 14%';
-    };
-    img.onerror = function() {
-      el.style.backgroundImage = 'url("https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&q=80")';
-    };
-    img.src = 'equipe-3-muletier.png';
-  })();
 
   /* Arrière-plans des panneaux excursions */
   loadBg('ep-haut-atlas', 'toubkal-groupe.jpg',       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80', '#3a4e4a');
