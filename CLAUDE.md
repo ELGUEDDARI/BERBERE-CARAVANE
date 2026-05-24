@@ -3,7 +3,7 @@
 ## Infos essentielles
 - **Repo GitHub** : https://github.com/ELGUEDDARI/BERBERE-CARAVANE.git
 - **GitHub Pages** : https://elgueddari.github.io/BERBERE-CARAVANE/
-- **Push** : `git push https://TON_TOKEN@github.com/ELGUEDDARI/BERBERE-CARAVANE.git master`  (remplace TON_TOKEN par le PAT GitHub)
+- **Push** : `git push origin master` — remote configuré avec PAT no-expiration, aucun token à saisir
 - **WhatsApp** : +212 662 132 973
 - **Serveur preview local** : port 3000 (caravane-berbere)
 
@@ -32,8 +32,8 @@ hero-video.mp4                ← Vidéo hero compressée (720x948, 8s, ~1.5 Mo)
 ## Palette CSS (`:root`)
 ```css
 --sand:      #F5EED8   /* fond sable clair */
---dark:      #1A1208   /* fond sombre principal */
---dark2:     #201608
+--dark:      #2E1A0A   /* fond sombre principal (éclairci mai 2026, était #1A1208) */
+--dark2:     #38200E   /* (était #201608) */
 --orange:    #E8722A   /* CTA, accents */
 --orange2:   #D4601E
 --teal:      #0D8B7A
@@ -41,6 +41,8 @@ hero-video.mp4                ← Vidéo hero compressée (720x948, 8s, ~1.5 Mo)
 --text-dark: #2A1F0A   /* texte principal (marron foncé) */
 --text-muted:#6B5740   /* texte secondaire */
 ```
+- Header : `rgba(46,26,10,0.94)` (mis à jour avec --dark)
+- `.dark2` class : `rgba(56,32,14,0.45)` (mis à jour avec --dark2)
 
 ## Points critiques à ne pas casser
 
@@ -94,8 +96,9 @@ hero-video.mp4                ← Vidéo hero compressée (720x948, 8s, ~1.5 Mo)
 ```bash
 git add -u
 git commit -m "message"
-git push https://TON_TOKEN@github.com/ELGUEDDARI/BERBERE-CARAVANE.git master
+git push origin master
 ```
+(Le remote origin contient déjà le PAT — ne jamais demander le token à l'utilisateur)
 
 ## Modifier toutes les sous-pages en lot (PowerShell)
 ```powershell
@@ -107,3 +110,25 @@ foreach ($f in $files) {
 }
 ```
 **IMPORTANT** : utiliser `.Replace()` (string simple), jamais `-replace` avec regex multiline → risque de corruption fichier.
+
+## Modifications importantes — Mai 2026
+
+### Section "Mot du Fondateur" (index.html — `#equipe`)
+- Ancienne section : grille 4 membres (Mohamed guide, Abdel chef, Driss muletier, Mohamed gérant)
+- Nouvelle section : "Mot du Fondateur" — photo Mohamed seul (tp-4) + citation en italique
+- CSS : `.founder-wrap`, `.founder-photo`, `.founder-quote`, `.founder-sig`
+- JS : seul `loadBg('tp-4', ...)` reste (tp-1, tp-2, tp-3 supprimés)
+- Texte fondateur : commence par "Né au cœur de l'Atlas à 2 160 m d'altitude, dans un petit village berbère de la vallée des Aït Bougmaz…"
+
+### Excursions panel "Excursions" (index.html)
+- "Dunes et Oasis du Drâa 2 jours" déplacé de "Randonnée dans le Sud" vers "Excursions"
+- Ajout : "Le Désert de Merzouga 3 jours" → lien vers `excursion-desert-sud.html`
+- Ajout : "Le Désert de Chégaga 3 jours" → lien vers `excursion-desert-sud.html#chegaga`
+
+### Section Chégaga (excursion-desert-sud.html — `#chegaga`)
+- Nouvelle section avec itinéraire 3 jours depuis Marrakech → M'Hamid → Erg Chgaga
+- Bouton WhatsApp réservation inclus
+
+### Nom supprimé
+- "Hassan Aït Ouali" retiré de `blog-toubkal.html` (remplacé par "Mohamed")
+- "Hassan (guide montagne)" retiré de `contact.html` (remplacé par Mohamed 34 ans)
