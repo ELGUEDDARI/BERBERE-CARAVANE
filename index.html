@@ -16,8 +16,8 @@
   <style>
     :root {
       --sand: #F5EED8;
-      --dark: #1A1208;
-      --dark2: #201608;
+      --dark: #2E1A0A;
+      --dark2: #38200E;
       --orange: #E8722A;
       --orange2: #D4601E;
       --teal: #0D8B7A;
@@ -38,7 +38,7 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 48px; height: 72px;
-      background: rgba(26,18,8,0.94); backdrop-filter: blur(14px);
+      background: rgba(46,26,10,0.94); backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(212,164,56,0.18);
     }
     .logo { display: flex; align-items: center; gap: 14px; }
@@ -116,7 +116,7 @@
     .sw { padding: 100px 48px; }
     .sand { background: var(--sand); color: var(--text-dark); }
     .dark { background: transparent; color: var(--sand); }
-    .dark2 { background: rgba(32,22,8,0.45); color: var(--sand); }
+    .dark2 { background: rgba(56,32,14,0.45); color: var(--sand); }
     .inner { max-width: 1240px; margin: 0 auto; }
     .kicker { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
     .s-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.15; }
@@ -984,13 +984,13 @@
   }
 
   /* Fond global du site */
-  var bodyBg = zelligeBg(zellige('#1A1208', '#D4A438', 0.07));
+  var bodyBg = zelligeBg(zellige('#2E1A0A', '#D4A438', 0.07));
   document.body.style.backgroundImage = bodyBg;
   document.body.style.backgroundRepeat = 'repeat';
   document.body.style.backgroundSize = '320px 320px';
 
   /* Z-bands */
-  var zDark  = zelligeBg(zellige('#1A1208', '#D4A438', 0.22));
+  var zDark  = zelligeBg(zellige('#2E1A0A', '#D4A438', 0.22));
   var zLight = zelligeBg(zellige('#F5EED8', '#E8722A', 0.20));
 
   function applyZ(id, bg, repeat) {
