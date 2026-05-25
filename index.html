@@ -71,7 +71,7 @@
     }
     #hero-vignette {
       position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(ellipse 70% 70% at center, transparent 20%, rgba(26,18,8,0.8) 100%);
+      background: radial-gradient(ellipse 70% 70% at center, transparent 20%, rgba(58,34,16,0.8) 100%);
     }
     .hero-title {
       position: absolute; top: calc(50% - 240px); z-index: 6;
@@ -143,8 +143,8 @@
     /* EXCURSIONS */
     .exc-header { text-align: center; margin-bottom: 48px; }
     .exc-categories { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; border: 1px solid rgba(212,164,56,0.18); }
-    .exc-cat-panel { padding: 36px 30px; border: 1px solid rgba(212,164,56,0.18); background: rgba(26,18,8,0.82); transition: background 0.25s; display: flex; flex-direction: column; position: relative; overflow: hidden; background-size: cover; background-position: center; }
-    .exc-cat-panel::before { content:''; position:absolute; inset:0; background:linear-gradient(160deg,rgba(20,12,4,0.88) 0%,rgba(26,18,8,0.70) 100%); z-index:0; pointer-events:none; transition:opacity 0.3s; }
+    .exc-cat-panel { padding: 36px 30px; border: 1px solid rgba(212,164,56,0.18); background: rgba(58,34,16,0.82); transition: background 0.25s; display: flex; flex-direction: column; position: relative; overflow: hidden; background-size: cover; background-position: center; }
+    .exc-cat-panel::before { content:''; position:absolute; inset:0; background:linear-gradient(160deg,rgba(48,22,8,0.88) 0%,rgba(58,34,16,0.70) 100%); z-index:0; pointer-events:none; transition:opacity 0.3s; }
     .exc-cat-panel:hover::before { opacity: 0.78; }
     .exc-cat-panel > * { position:relative; z-index:1; }
     .exc-cat-icon { margin-bottom: 16px; line-height: 1; display:flex; align-items:center; }
@@ -314,7 +314,7 @@
     .strip-caption {
       position: absolute; bottom: 0; left: 0; right: 0;
       padding: 32px 14px 10px;
-      background: linear-gradient(transparent, rgba(20,12,4,0.9));
+      background: linear-gradient(transparent, rgba(48,22,8,0.9));
       color: var(--gold); font-size: 0.68rem;
       letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
       opacity: 0; transition: opacity 0.3s;
@@ -349,7 +349,7 @@
     .g-item:hover .g-item-bg { transform: scale(1.08); }
     .g-item-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(20,12,4,0.88) 0%, rgba(20,12,4,0.1) 55%);
+      background: linear-gradient(to top, rgba(48,22,8,0.88) 0%, rgba(48,22,8,0.1) 55%);
       opacity: 0; transition: opacity 0.4s;
     }
     .g-item:hover .g-item-overlay { opacity: 1; }
@@ -405,7 +405,7 @@
     .mob-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .mob-overlay {
       position: fixed; inset: 0; z-index: 205;
-      background: rgba(20,12,4,0.98);
+      background: rgba(48,22,8,0.98);
       display: flex; flex-direction: column;
       padding: 96px 36px 52px;
       transform: translateX(100%);
