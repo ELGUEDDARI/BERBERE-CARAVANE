@@ -271,6 +271,7 @@
   <section id="agafay" style="margin-top:72px;padding-top:48px;border-top:2px solid rgba(212,164,56,0.2);">
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Excursion · 1 Journée</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">Le Désert d'Agafay</h2>
+    <div id="agafay-photo" style="width:100%;max-width:720px;height:260px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:24px;background-color:#8a5828;"></div>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:16px;">À seulement 40 km de Marrakech, le désert d'Agafay est un désert de pierre minéral et lunaire, sans dunes mais d'une beauté austère fascinante. Idéal pour une immersion désertique sans longue route. Au programme : balade à dos de dromadaire, déjeuner sous la tente berbère, quad en option, et coucher de soleil sur les collines rocheuses avec vue sur le Toubkal enneigé.</p>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;"><strong style="color:var(--gold);">Inclus :</strong> La découverte du désert d'Agafay · La courte distance pour un bon dépaysement · Le partage du repas dans un restaurant local ou du thé chez une famille berbère · L'exploration des vallées discrètes de l'atlas · Balade agréable sur place selon votre goût · Il sera possible de prendre l'option du dîner avec spectacle dans l'atlas · Retour à votre hébergement à Marrakech. <strong style="color:var(--orange);">Non inclus :</strong> Les repas dans la journée · Les boissons et Achats personnels · Les pourboires.</p>
     <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+l%27excursion+d%C3%A9sert+Agafay." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;">Réserver Agafay via WhatsApp</a>
@@ -288,6 +289,7 @@
   <section id="ouzoud" style="margin-top:72px;padding-top:48px;border-top:2px solid rgba(212,164,56,0.2);">
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Excursion · 1 Journée</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">Les Cascades d'Ouzoud</h2>
+    <div id="ouzoud-photo" style="width:100%;max-width:720px;height:260px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:24px;background-color:#3a6030;"></div>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:16px;">Les plus belles cascades du Maroc plongent de 110 mètres dans un bassin naturel entouré d'oliviers et de singes magots en liberté. Situées à 170 km de Marrakech (2h30), elles sont accessibles toute l'année. Des sentiers bien balisés descendent jusqu'au pied des chutes. Un arc-en-ciel permanent berce l'atmosphère de magie. Promenade en barque en option au retour.</p>
     <p style="font-size:.85rem;color:rgba(245,238,216,.55);margin-bottom:14px;">Saison : toute l'année · Départ assuré à partir de 2 personnes</p>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;"><strong style="color:var(--gold);">Inclus :</strong> Transfert aller et retour en véhicule de et à Marrakech (hôtel) · Minibus, 4X4 ou voiture de tourisme agrée · Balade au site des cascades d'Ouzoude. <strong style="color:var(--orange);">Non inclus :</strong> Les repas dans la journée · Les boissons et Achats personnels · Les pourboires.</p>
@@ -349,6 +351,8 @@
   document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='320px 320px';
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
   loadBg('hero-photo','ouzoud-arcs.jpg','https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=1800&q=80','#2a6e4a');
+  loadBg('agafay-photo','agafay-famille.jpg','https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=900&q=80','#8a5828');
+  loadBg('ouzoud-photo','ouzoud-barques.jpg','https://images.unsplash.com/photo-1504432842672-1a79f78e4084?w=900&q=80','#3a6030');
 })();
   /* MENU MOBILE */
   var mobBtn     = document.getElementById('mob-btn');

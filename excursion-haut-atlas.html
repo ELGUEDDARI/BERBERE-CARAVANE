@@ -259,6 +259,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Trekking · Haut Atlas</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:12px;">Le M'goun — 4 071 m</h2>
     <p style="font-size:.85rem;color:rgba(245,238,216,.55);margin-bottom:20px;">8 jours · Niveau 3 chaussures · Saison : fin mai à octobre · Hébergement : 2 nuits hôtel + 5 sous tente</p>
+    <div id="mgoun-photo" style="width:100%;max-width:720px;height:260px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:24px;background-color:#4a5c3a;"></div>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:24px;">Si vous rêvez d'un voyage riche en contrastes et en rencontres dans les vallées riantes de Bougmaz, voici un trek pour les amoureux d'espaces sauvages pour gravir le M'Goun.</p>
 
     <div class="itin-jours" style="max-width:720px;margin-top:32px;margin-bottom:32px;">
@@ -278,6 +279,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Trekking · Haut Atlas</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:12px;">Trek la Vallée Heureuse — Aït Bougmez</h2>
     <p style="font-size:.85rem;color:rgba(245,238,216,.55);margin-bottom:20px;">8 jours · Niveau 3 chaussures · Saison : début mai à fin octobre · Hébergement : 2 nuits hôtel + 5 au gîte</p>
+    <div id="vallee-photo" style="width:100%;max-width:720px;height:260px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:24px;background-color:#4a6030;"></div>
 
     <div class="itin-jours" style="max-width:720px;margin-top:32px;margin-bottom:32px;">
       <div class="day-block"><div class="day-num">J 01</div><div class="day-title">Arrivée à Marrakech</div><p class="day-text">Accueil à l'aéroport et transfert à l'hôtel. Visite libre de la ville. Repas : Libre.</p></div>
@@ -337,7 +339,9 @@
   var bb=zbg(zellige('#3A2210','#D4A438',0.07));
   document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='320px 320px';
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
-  loadBg('hero-photo','toubkal-sunset.jpg','https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80','#2a1a08');
+  loadBg('hero-photo','toubkal-vue-sommet.jpg','https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80','#2a1a08');
+  loadBg('mgoun-photo','mgoun-crete.jpg','https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80','#4a5c3a');
+  loadBg('vallee-photo','vallee-heureuse-panorama.jpg','https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=900&q=80','#4a6030');
 })();
   /* MENU MOBILE */
   var mobBtn     = document.getElementById('mob-btn');

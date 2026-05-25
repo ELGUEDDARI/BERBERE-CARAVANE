@@ -291,6 +291,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Randonnée Sud · 2 Jours</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:12px;">Désert de Zagora — Vallée du Drâa</h2>
     <p style="font-size:.85rem;color:rgba(245,238,216,.55);margin-bottom:20px;">2 jours · Saison : toute l'année · Départ : Marrakech</p>
+    <div id="zagora-photo" style="width:100%;max-width:720px;height:260px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:24px;background-color:#7a4018;"></div>
 
     <div class="itin-jours" style="max-width:720px;margin-top:32px;margin-bottom:32px;">
       <div class="day-block"><div class="day-num">J 01</div><div class="day-title">Marrakech – Zagora</div><p class="day-text">Traversez l'Atlas et les étendues d'Ouarzazate par la vallée d'Ounilla. Longer la vallée du Draa jusqu'à Zagora où les nomades vous attendent. Possibilité de faire un tour à dos de dromadaire. Nuit sous tente au camp dans les dunes.</p></div>
@@ -315,6 +316,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Randonnée Sud · 8 Jours</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:12px;">Circuit Randonnée et Trekking au Siroua</h2>
     <p style="font-size:.85rem;color:rgba(245,238,216,.55);margin-bottom:20px;">8 jours · Difficulté : Moyen · Saison : début octobre à fin avril · Départ : Ouarzazate ou Marrakech</p>
+    <div id="siroua-photo" style="width:100%;max-width:720px;height:260px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:24px;background-color:#5a3828;"></div>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:24px;">La région de Siroua reste célèbre par la production du Safran et le Tapis Ouaouzguite. Ainsi que les beaux paysages qui la distingue d'autres parties de l'Anti Atlas et du pays entier. L'ascension du mont Siroua 3 306 m permet de voir le mont Toubkal de face sans obstacle.</p>
 
     <div class="itin-jours" style="max-width:720px;margin-top:32px;margin-bottom:32px;">
@@ -334,6 +336,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Circuit · 8 Jours</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:12px;">Circuit de Charme — Taroudant, Tiznit, Tafraoute, Agadir et Essaouira</h2>
     <p style="font-size:.85rem;color:rgba(245,238,216,.55);margin-bottom:20px;">8 jours · Saison : toute l'année · Voyageurs : en famille et adulte · Région : sud-ouest de Marrakech</p>
+    <div id="tafraout-photo" style="width:100%;max-width:720px;height:260px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:24px;background-color:#7a4820;"></div>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:24px;">Une belle traversée de l'Atlas en minibus vous attend avec une belle vue sur le grand sud du col de Test.</p>
 
     <div class="itin-jours" style="max-width:720px;margin-top:32px;margin-bottom:32px;">
@@ -394,8 +397,11 @@
   var bb=zbg(zellige('#3A2210','#D4A438',0.07));
   document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='320px 320px';
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
-  loadBg('hero-photo','desert-chameaux.jpg','https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1800&q=80','#9a5418');
+  loadBg('hero-photo','merzouga-dune-sunset.jpg','https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1800&q=80','#9a5418');
   loadBg('saghro-photo','saghro-route.jpg','https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=900&q=80','#7a4820');
+  loadBg('zagora-photo','zagora-palmeraie.jpg','https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=900&q=80','#7a4018');
+  loadBg('siroua-photo','siroua-trek.jpg','https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=900&q=80','#5a3828');
+  loadBg('tafraout-photo','tafraout-granite.jpg','https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=900&q=80','#7a4820');
 })();
   /* MENU MOBILE */
   var mobBtn     = document.getElementById('mob-btn');
