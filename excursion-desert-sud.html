@@ -303,7 +303,21 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Randonnée Sud · 8 Jours</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:12px;">Sahara et Montagnes en Hiver — Djebel Saghro</h2>
     <p style="font-size:.85rem;color:rgba(245,238,216,.55);margin-bottom:20px;">8 jours · Difficulté : Moyen · Saison : début octobre à fin avril · Départ : Marrakech ou Ouarzazate</p>
-    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;">Only those crossing Djebel Saghro on foot can admire the magic of the landscape.</p>
+
+    <div id="saghro-photo" style="width:100%;max-width:720px;height:280px;border-radius:6px;background-size:cover;background-position:center;margin-bottom:28px;background-color:#7a4820;"></div>
+
+    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:24px;">Massif volcanique de l'Anti-Atlas situé entre la vallée du Drâa et les gorges du Dadès, le Djebel Saghro est un monde à part. Ses paysages de roche noire sculptée par l'érosion, ses pitons basaltiques qui s'élancent vers le ciel, ses douars berbères de la tribu des Aït Atta et ses bivouacs sous les étoiles en font l'une des destinations de trekking hivernal les plus saisissantes du Maroc. Ici, point de neige ni de froid intense — le Saghro offre ses plus beaux visages d'octobre à avril, quand le Haut-Atlas reste inaccessible.</p>
+
+    <div class="itin-jours" style="max-width:720px;margin-top:32px;margin-bottom:32px;">
+      <div class="day-block"><div class="day-num">J 01</div><div class="day-title">Arrivée à Ouarzazate ou Marrakech</div><p class="day-text">Accueil à l'aéroport ou à votre hébergement. Installation et briefing sur le circuit. Première immersion dans l'ambiance du Sud marocain. Nuit à l'hôtel.</p></div>
+      <div class="day-block"><div class="day-num">J 02</div><div class="day-title">Transfert vers le Saghro — Iknioun</div><p class="day-text">Départ en 4x4 vers le massif du Saghro par Boumalne du Dadès ou Nkob. Traversée de paysages arides où les kasbahs de pisé se fondent dans la roche. Arrivée au village d'Iknioun, porte d'entrée du massif. Nuit chez l'habitant ou en bivouac.</p></div>
+      <div class="day-block"><div class="day-num">J 03</div><div class="day-title">Iknioun — Gorges de l'Oued Saghro</div><p class="day-text">Première journée de marche de 5 à 6 heures à travers les gorges encaissées creusées par l'oued. Les parois de basalte noir offrent des jeux de lumière saisissants. Rencontre possible avec des familles nomades des Aït Atta. Bivouac en pleine nature.</p></div>
+      <div class="day-block"><div class="day-num">J 04</div><div class="day-title">Traversée des Plateaux Volcaniques</div><p class="day-text">6 heures de marche sur les hauts plateaux basaltiques. Le paysage lunaire et minéral contraste avec les oasis verdoyantes dissimulées dans les ravins. Vue panoramique sur les chaînes de l'Anti-Atlas et, par temps clair, sur le Haut-Atlas enneigé au nord. Bivouac sous les étoiles.</p></div>
+      <div class="day-block"><div class="day-num">J 05</div><div class="day-title">Ascension du Sommet — Amalou n'Mansour (2 712 m)</div><p class="day-text">Montée vers le point culminant du Djebel Saghro. 5 à 6 heures de marche avec dénivelé progressif. Du sommet, le regard embrasse un horizon immense : le désert du Drâa au sud, les gorges du Dadès à l'est, les cimes du Toubkal au nord. Descente sur un bivouac bien abrité.</p></div>
+      <div class="day-block"><div class="day-num">J 06</div><div class="day-title">Villages de la Tribu des Aït Atta</div><p class="day-text">Marche de 5 heures à travers les douars des Aït Atta, gardiens des traditions berbères du Sud. Visite des greniers collectifs (ighrem), échanges avec les femmes tisserandes, découverte des techniques ancestrales d'irrigation. Nuit en gîte berbère.</p></div>
+      <div class="day-block"><div class="day-num">J 07</div><div class="day-title">Descente sur la Vallée du Dadès ou de Nkob</div><p class="day-text">Dernière étape de marche (4 heures) vers la vallée. Le passage des derniers cols offre une vue imprenable sur les palmeraies et les kasbahs de pisé qui s'étendent en contrebas. Transfert en véhicule jusqu'à Ouarzazate ou Marrakech. Nuit à l'hôtel.</p></div>
+      <div class="day-block"><div class="day-num">J 08</div><div class="day-title">Départ et Transfert à l'Aéroport</div><p class="day-text">Petit-déjeuner et transfert à l'aéroport de Marrakech ou Ouarzazate selon votre vol retour. Fin d'un circuit d'exception dans l'un des massifs les plus authentiques du Maroc.</p></div>
+    </div>
     <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+trek+Djebel+Saghro+8+jours." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;">Réserver Djebel Saghro via WhatsApp</a>
   </section>
 
@@ -391,6 +405,7 @@
   document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='320px 320px';
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
   loadBg('hero-photo','desert-chameaux.jpg','https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=1800&q=80','#9a5418');
+  loadBg('saghro-photo','saghro-route.jpg','https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=900&q=80','#7a4820');
 })();
   /* MENU MOBILE */
   var mobBtn     = document.getElementById('mob-btn');
