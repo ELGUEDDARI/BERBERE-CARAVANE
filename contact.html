@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --sand: #F5EED8; --dark: #3A2210; --dark2: #452A12;
+      --sand: #F5EED8; --dark: #513016; --dark2: #613B19;
       --orange: #E8722A; --gold: #D4A438; --teal: #0D8B7A;
       --blue: #1A4A8B; --text-dark: #2A1F0A; --text-muted: #6B5740;
     }
@@ -25,7 +25,7 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 48px; height: 72px;
-      background: rgba(58,34,16,0.94); backdrop-filter: blur(14px);
+      background: rgba(81,48,22,0.94); backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(212,164,56,0.18);
     }
     .logo { display: flex; align-items: center; gap: 14px; }
@@ -48,7 +48,7 @@
     .page-hero {
       padding-top: 72px; min-height: 320px; position: relative;
       display: flex; align-items: flex-end;
-      background: linear-gradient(180deg, rgba(58,34,16,0) 0%, rgba(58,34,16,0.7) 100%), #2A1A0A;
+      background: linear-gradient(180deg, rgba(81,48,22,0) 0%, rgba(81,48,22,0.7) 100%), #2A1A0A;
     }
     .page-hero-bg {
       position: absolute; inset: 0; z-index: 0;
@@ -56,7 +56,7 @@
     }
     .page-hero-bg::after {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(48,22,8,0.52) 0%, rgba(48,22,8,0.93) 100%);
+      background: linear-gradient(180deg, rgba(67,31,11,0.52) 0%, rgba(67,31,11,0.93) 100%);
       pointer-events: none;
     }
     .page-hero-content {
@@ -231,7 +231,7 @@
     .mob-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .mob-overlay {
       position: fixed; inset: 0; z-index: 205;
-      background: rgba(48,22,8,0.98);
+      background: rgba(67,31,11,0.98);
       display: flex; flex-direction: column;
       padding: 96px 36px 52px;
       transform: translateX(100%);
@@ -609,12 +609,12 @@
   function zellige(bg,gold,op){var sz=320,cx=160,cy=160,blue='#3A6BC4',teal='#0D6B5A',amber=gold,peach='#C8622A',a=op;function pt(ang,r){var rad=(ang-90)*Math.PI/180;return(cx+r*Math.cos(rad)).toFixed(1)+','+(cy+r*Math.sin(rad)).toFixed(1);}function poly(pts,fill,fo){return'<polygon points="'+pts+'" fill="'+fill+'" fill-opacity="'+fo+'"/>';}var out='<rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>',N=16;for(var i=0;i<N;i++){var b=i*(360/N);out+=poly([pt(b-4,148),pt(b,155),pt(b+4,148),pt(b,82)].join(' '),blue,a*1.6);}for(var i=0;i<N;i++){var b=i*(360/N)+(180/N);out+=poly([pt(b,118),pt(b+5,102),pt(b,88),pt(b-5,102)].join(' '),amber,a*1.4);}var pts16=[];for(var i=0;i<32;i++){var ang=(i*11.25-90)*Math.PI/180;var rad=i%2===0?76:52;pts16.push((cx+rad*Math.cos(ang)).toFixed(1)+','+(cy+rad*Math.sin(ang)).toFixed(1));}out+='<polygon points="'+pts16.join(' ')+'" fill="'+teal+'" fill-opacity="'+(a*1.5)+'"/>';var oct=[];for(var i=0;i<8;i++){var ang=(i*45-22.5-90)*Math.PI/180;oct.push((cx+42*Math.cos(ang)).toFixed(1)+','+(cy+42*Math.sin(ang)).toFixed(1));}out+='<polygon points="'+oct.join(' ')+'" fill="'+amber+'" fill-opacity="'+(a*1.8)+'"/>';var ctr8=[];for(var i=0;i<16;i++){var ang=(i*22.5-90)*Math.PI/180;var rad=i%2===0?28:12;ctr8.push((cx+rad*Math.cos(ang)).toFixed(1)+','+(cy+rad*Math.sin(ang)).toFixed(1));}out+='<polygon points="'+ctr8.join(' ')+'" fill="'+peach+'" fill-opacity="'+(a*2.2)+'"/>';out+='<circle cx="'+cx+'" cy="'+cy+'" r="6" fill="'+amber+'" fill-opacity="'+(a*2.5)+'"/>';return'<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'">'+out+'</svg>';}
   function zelligeBg(s){return 'url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s)+'")';}
 
-  var bodyBg = zelligeBg(zellige('#3A2210','#D4A438',0.07));
+  var bodyBg = zelligeBg(zellige('#513016','#D4A438',0.07));
   document.body.style.backgroundImage = bodyBg;
   document.body.style.backgroundRepeat = 'repeat';
   document.body.style.backgroundSize = '320px 320px';
 
-  var zDark = zelligeBg(zellige('#3A2210','#D4A438',0.38));
+  var zDark = zelligeBg(zellige('#513016','#D4A438',0.38));
   var zLight = zelligeBg(zellige('#F5EED8','#E8722A',0.42));
   function applyZ(id,bg){var el=document.getElementById(id);if(!el)return;el.style.backgroundImage=bg;el.style.backgroundRepeat='repeat';el.style.backgroundSize='320px 320px';}
   applyZ('z-band-top', zLight);

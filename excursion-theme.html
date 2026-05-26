@@ -10,12 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--sand:#F5EED8;--dark:#3A2210;--dark2:#452A12;--orange:#E8722A;--orange2:#D4601E;--teal:#0D8B7A;--gold:#D4A438;}
+    :root{--sand:#F5EED8;--dark:#513016;--dark2:#613B19;--orange:#E8722A;--orange2:#D4601E;--teal:#0D8B7A;--gold:#D4A438;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{font-family:'Inter',system-ui,sans-serif;background:var(--dark);color:var(--sand);overflow-x:hidden;}
     a{text-decoration:none;color:inherit;}
-    .site-header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;background:rgba(58,34,16,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,164,56,0.18);}
+    .site-header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:72px;background:rgba(81,48,22,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,164,56,0.18);}
     .logo{display:flex;align-items:center;gap:14px;}
     .logo-star{width:36px;height:36px;flex-shrink:0;}
     .logo-img{height:78px;width:78px;object-fit:contain;border-radius:50%;flex-shrink:0;border:2px solid var(--gold);background:rgba(255,255,255,0.08);box-shadow:0 0 0 5px rgba(212,164,56,0.18),0 4px 18px rgba(0,0,0,0.45);}
@@ -28,13 +28,13 @@
     .nav-cta{padding:9px 22px !important;background:var(--orange);color:var(--sand) !important;border-radius:3px;font-weight:600 !important;opacity:1 !important;box-shadow:3px 3px 0 rgba(0,0,0,0.4);}
     .page-hero{margin-top:72px;height:520px;position:relative;overflow:hidden;}
     .page-hero-photo{position:absolute;inset:0;background-size:cover;background-position:center;}
-    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(58,34,16,0.05) 0%,rgba(58,34,16,0.55) 58%,rgba(58,34,16,0.94) 100%);}
+    .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(81,48,22,0.05) 0%,rgba(81,48,22,0.55) 58%,rgba(81,48,22,0.94) 100%);}
     .page-hero-content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:60px 80px;}
     .hero-breadcrumb{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
     .hero-breadcrumb a{color:rgba(212,164,56,0.7);}
     .page-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.05;color:var(--sand);margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,1),0 4px 40px rgba(0,0,0,0.8);}
     .page-meta-row{display:flex;gap:20px;flex-wrap:wrap;}
-    .meta-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(58,34,16,0.7);border:1px solid rgba(212,164,56,0.3);border-radius:999px;font-size:0.75rem;font-weight:500;color:var(--sand);}
+    .meta-pill{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;background:rgba(81,48,22,0.7);border:1px solid rgba(212,164,56,0.3);border-radius:999px;font-size:0.75rem;font-weight:500;color:var(--sand);}
     .meta-pill span{color:var(--gold);}
     .page-content{max-width:1100px;margin:0 auto;padding:80px 48px;}
     .two-col{display:grid;grid-template-columns:2fr 1fr;gap:60px;align-items:start;}
@@ -90,7 +90,7 @@
     .mob-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .mob-overlay {
       position: fixed; inset: 0; z-index: 205;
-      background: rgba(48,22,8,0.98);
+      background: rgba(67,31,11,0.98);
       display: flex; flex-direction: column;
       padding: 96px 36px 52px;
       transform: translateX(100%);
@@ -245,7 +245,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Voyage à Thème · 4 Jours</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">Terres du Safran</h2>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:16px;">La région de Taliouine, dans l'Anti-Atlas, est l'une des premières productrices de safran au monde. Ce voyage thématique de 4 jours vous plonge dans l'univers de l'"or rouge" : visite des coopératives de femmes, cueillette en octobre (ou découverte hors saison), cuisine au safran, et randonnées dans les amandiers et arganiers de l'Anti-Atlas. Un voyage sensoriel unique.</p>
-    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;"><strong style="color:var(--gold);">Inclus :</strong> Transport, guide spécialisé, hébergement maison d'hôtes, pension complète, visites coopératives. <strong style="color:var(--orange);">Non inclus :</strong> Vols, assurance, achats personnels, pourboires.</p>
+    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;"><strong style="color:var(--gold);">Inclus :</strong> Transport, guide spécialisé, hébergement maison et gîtes locales, pension complète, visites coopératives. <strong style="color:var(--orange);">Non inclus :</strong> Vols, assurance, achats personnels, pourboires.</p>
     <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+voyage+Terres+du+Safran+4+jours." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;">Réserver Terres du Safran via WhatsApp</a>
   </section>
 
@@ -253,7 +253,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Voyage à Thème · 6 Jours</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">La Transhumance</h2>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:16px;">Chaque été, les familles berbères des hautes vallées montent avec leurs troupeaux vers les alpages d'altitude. Suivre la transhumance, c'est partager la vie pastorale authentique : monter les tentes avec les familles, garder les troupeaux, fabriquer le fromage de brebis, traverser des paysages de haute montagne rarement visités par les touristes. Un voyage humain et initiatique.</p>
-    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;">Saison : juin à septembre. <strong style="color:var(--gold);">Inclus :</strong> Guide, transferts, hébergement chez l'habitant, tous repas, mulets. <strong style="color:var(--orange);">Non inclus :</strong> Vols, assurance, matériel de randonnée, pourboires.</p>
+    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;">Saison : fin mai à mi-septembre. <strong style="color:var(--gold);">Inclus :</strong> Guide, transferts, hébergement chez l'habitant, tous repas, mulets et dromadaires. <strong style="color:var(--orange);">Non inclus :</strong> Vols, assurance, matériel de randonnée, pourboires.</p>
     <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+voyage+Transhumance+6+jours." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;">Réserver la Transhumance via WhatsApp</a>
   </section>
 
@@ -261,7 +261,7 @@
     <div style="font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Voyage à Thème · 5 Jours</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:var(--sand);margin-bottom:20px;">À la Rencontre des Berbères</h2>
     <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:16px;">Ce voyage immersif vous invite à découvrir la culture amazighe de l'intérieur : dormir chez l'habitant dans des villages de pisé, apprendre les rudiments de la langue tamazight, participer à la fabrication du pain berbère, du couscous et du tajine, assister à un mariage villageois (si la saison le permet), découvrir l'artisanat local (tapis, bijoux, poterie). Nos guides sont eux-mêmes berbères et partagent leur vie quotidienne avec passion.</p>
-    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;"><strong style="color:var(--gold);">Inclus :</strong> Transport, guide berbère local, hébergement chez l'habitant, pension complète, ateliers culturels. <strong style="color:var(--orange);">Non inclus :</strong> Vols, assurance, dépenses personnelles, pourboires.</p>
+    <p style="font-size:.9rem;line-height:1.9;color:rgba(245,238,216,.72);max-width:720px;margin-bottom:32px;">Saison : de mai à octobre. <strong style="color:var(--gold);">Inclus :</strong> Transport, guide berbère local, hébergement chez l'habitant, pension complète, ateliers culturels. <strong style="color:var(--orange);">Non inclus :</strong> Vols, assurance, dépenses personnelles, pourboires.</p>
     <a href="https://wa.me/212662132973?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9(e)+par+le+voyage+Rencontre+des+Berb%C3%A8res+5+jours." class="cta-btn" target="_blank" rel="noopener" style="display:inline-block;">Réserver Rencontre des Berbères via WhatsApp</a>
   </section>
 
@@ -284,7 +284,7 @@
 (function(){
   function zellige(bg,gold,op){var sz=320,cx=160,cy=160,blue='#3A6BC4',teal='#0D6B5A',amber=gold,peach='#C8622A',a=op;function pt(ang,r){var rad=(ang-90)*Math.PI/180;return(cx+r*Math.cos(rad)).toFixed(1)+','+(cy+r*Math.sin(rad)).toFixed(1);}function poly(pts,fill,fo){return'<polygon points="'+pts+'" fill="'+fill+'" fill-opacity="'+fo+'"/>';}var out='<rect width="'+sz+'" height="'+sz+'" fill="'+bg+'"/>',N=16;for(var i=0;i<N;i++){var b=i*(360/N);out+=poly([pt(b-4,148),pt(b,155),pt(b+4,148),pt(b,82)].join(' '),blue,a*1.6);}for(var i=0;i<N;i++){var b=i*(360/N)+(180/N);out+=poly([pt(b,118),pt(b+5,102),pt(b,88),pt(b-5,102)].join(' '),amber,a*1.4);}var pts16=[];for(var i=0;i<32;i++){var ang=(i*11.25-90)*Math.PI/180;var rad=i%2===0?76:52;pts16.push((cx+rad*Math.cos(ang)).toFixed(1)+','+(cy+rad*Math.sin(ang)).toFixed(1));}out+='<polygon points="'+pts16.join(' ')+'" fill="'+teal+'" fill-opacity="'+(a*1.5)+'"/>';var oct=[];for(var i=0;i<8;i++){var ang=(i*45-22.5-90)*Math.PI/180;oct.push((cx+42*Math.cos(ang)).toFixed(1)+','+(cy+42*Math.sin(ang)).toFixed(1));}out+='<polygon points="'+oct.join(' ')+'" fill="'+amber+'" fill-opacity="'+(a*1.8)+'"/>';var ctr8=[];for(var i=0;i<16;i++){var ang=(i*22.5-90)*Math.PI/180;var rad=i%2===0?28:12;ctr8.push((cx+rad*Math.cos(ang)).toFixed(1)+','+(cy+rad*Math.sin(ang)).toFixed(1));}out+='<polygon points="'+ctr8.join(' ')+'" fill="'+peach+'" fill-opacity="'+(a*2.2)+'"/>';out+='<circle cx="'+cx+'" cy="'+cy+'" r="6" fill="'+amber+'" fill-opacity="'+(a*2.5)+'"/>';return'<svg xmlns="http://www.w3.org/2000/svg" width="'+sz+'" height="'+sz+'">'+out+'</svg>';}
   function zbg(svg){return'url("data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg)+'")';}
-  var bb=zbg(zellige('#3A2210','#D4A438',0.07));
+  var bb=zbg(zellige('#513016','#D4A438',0.07));
   document.body.style.backgroundImage=bb;document.body.style.backgroundRepeat='repeat';document.body.style.backgroundSize='320px 320px';
   function loadBg(id,p,f,t){var el=document.getElementById(id);if(!el)return;if(t)el.style.backgroundColor=t;var src=p||f;var img=new Image();img.onload=function(){el.style.backgroundImage='url("'+src+'")'};img.onerror=function(){if(src!==f){var i2=new Image();i2.onload=function(){el.style.backgroundImage='url("'+f+'")'};i2.src=f;}};img.src=src;}
   loadBg('hero-photo','gorges-kasbah.jpg','https://images.unsplash.com/photo-1577147443647-81856d5151af?w=1800&q=80','#5a3820');
