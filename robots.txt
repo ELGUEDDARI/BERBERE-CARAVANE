@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berbere-caravane.com/sitemap.xml
