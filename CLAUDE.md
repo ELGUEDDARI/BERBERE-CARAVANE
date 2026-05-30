@@ -122,12 +122,19 @@ foreach ($f in $files) {
 
 ### Excursions panel "Excursions" (index.html)
 - "Dunes et Oasis du Drâa 2 jours" déplacé de "Randonnée dans le Sud" vers "Excursions"
-- Ajout : "Le Désert de Merzouga 3 jours" → lien vers `excursion-desert-sud.html`
-- Ajout : "Le Désert de Chégaga 3 jours" → lien vers `excursion-desert-sud.html#chegaga`
+- "Le Désert de Merzouga 3 jours" → lien vers `excursion-desert-sud.html`
+- "Le Désert de Chégaga 3 jours" → lien vers `excursion-journee.html#chegaga`
 
-### Section Chégaga (excursion-desert-sud.html — `#chegaga`)
-- Nouvelle section avec itinéraire 3 jours depuis Marrakech → M'Hamid → Erg Chgaga
-- Bouton WhatsApp réservation inclus
+### Sections Chégaga + Zagora — DÉPLACÉES (juin 2026, demande client)
+- Les sections `#chegaga` (Désert de Chégaga, 3 j) et `#draa` (Désert de Zagora/Vallée du Drâa, 2 j) ont été **déplacées de `excursion-desert-sud.html` vers `excursion-journee.html`** (rubrique Excursions, pour éviter le doublon avec "Randonnée dans le Sud").
+- Liens index.html mis à jour : `excursion-journee.html#chegaga` et `excursion-journee.html#draa`
+- CSS `.itin-jours .day-block/.day-num/.day-title/.day-text` ajouté dans journee.html (absent avant)
+- `loadBg('zagora-photo', 'zagora-palmeraie.jpg', …)` déplacé vers le JS de journee.html
+- Labels eyebrow changés "Randonnée Sud" → "Excursion"
+
+### Nom supprimé
+- "Hassan Aït Ouali" retiré de `blog-toubkal.html` (remplacé par "Mohamed")
+- "Hassan (guide montagne)" retiré de `contact.html` (remplacé par Mohamed 34 ans)
 
 ### Nom supprimé
 - "Hassan Aït Ouali" retiré de `blog-toubkal.html` (remplacé par "Mohamed")
